@@ -51,25 +51,25 @@
 
     // Creates new user instance
 
-    var u = new app.Models.User({
-        firstName: firstName,
-        lastName: lastName,
-        userName: userName,
-        email: email,
-        password: password,
-      });
+    // var u = new app.Models.User({
+    //     firstName: firstName,
+    //     lastName: lastName,
+    //     userName: userName,
+    //     email: email,
+    //     password: password,
+    //   });
 
     // Adds instance of user to collection
 
-    if (password == confirm) {
+    // if (password == confirm) {
 
-       this.collection.add(u).save().success(function(data){
-          Cookies.set('access_token', data.access_token);
-          Cookies.set('username', data.username);
+    //    this.collection.add(u).save().success(function(data){
+    //       Cookies.set('access_token', data.access_token);
+    //       Cookies.set('username', data.username);
 
-       });
+    //    });
 
-    }
+    // }
 
     });
 
