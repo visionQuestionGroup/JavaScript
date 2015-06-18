@@ -16,7 +16,7 @@
   /*$.ajaxSetup({
 
     headers: {
-      "Authorization" : "12345" // whatever value is stored in the cookie
+      'Access-Token' : Cookies.get('access_token')
     }
 
   });*/
