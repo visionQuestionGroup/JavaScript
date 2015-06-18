@@ -10,10 +10,11 @@
 
   // allPosts.fetch().done( function () {
 
-  //   app.mainRouter = new app.Routers.MainRouter({
-  //     collection: allPosts
-  //   });
-    Backbone.history.start();
+  app.mainRouter = new app.Routers.MainRouter({
+      // collection: allPosts
+    });
+
+  Backbone.history.start();
 
   // });
 

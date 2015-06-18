@@ -21,7 +21,7 @@
   },
 
     signUp: function () {
-      new app.Views.signup();
+      new app.Views.SignUpView();
     },
 
     errorPage: function () {

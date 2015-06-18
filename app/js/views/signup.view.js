@@ -3,14 +3,14 @@
   'use strict';
 
 
-  app.Views.SignUpeView = Backbone.View.extend({
+  app.Views.SignUpView = Backbone.View.extend({
 
     className: 'signUp',
 
     template: hbs.signup,
 
     events: {
-      'click #signup' : 'signup',
+      'click #signup' : 'signUp',
     },
 
   initialize: function (options) {
@@ -25,7 +25,7 @@
 
   render: function(){
 
-    this.$el.html(this.template({ signup: this.collection.toJSON() }));
+    this.$el.html(this.template);
 
   },
 
