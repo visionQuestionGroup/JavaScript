@@ -1,3 +1,8 @@
-.logo {
+nav {
   height: 100px;
+  background-color: #E6E6E6;
   border-bottom: 1px black solid; }
+
+.logo {
+  font-size: 36px;
+  font-weight: bold; }
