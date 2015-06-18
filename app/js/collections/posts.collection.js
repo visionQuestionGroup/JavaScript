@@ -9,7 +9,7 @@
 
     // comparator: '',
 
-    url: app.rootURL
+    // url: app.rootURL
 
 
 

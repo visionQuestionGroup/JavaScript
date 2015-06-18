@@ -9,7 +9,7 @@ app.Collections.Guesses = Backbone.Collection.extend({
 
     // comparator: '',
 
-    url: app.rootURL
+    // url:
 
   });
 
