@@ -18,8 +18,8 @@ body {
 
 // Nav Bar
 
-nav {
-  background-color: #DDDDDD;
+.top-bar {
+  // background-color: #DDDDDD;
   border-bottom: 1px black solid;
 }
 
@@ -38,10 +38,18 @@ nav {
   margin: 10px auto;
 }
 
-.input {
-  margin: 10px auto;
-  border: 1px #CCC solid;
-  text-align: center;
+input[type="text"] {
+    margin: 10px auto;
+    border: 1px #CCC solid;
+    text-align: center;
+    border-radius: 5px;
+}
+
+input[type="password"] {
+    margin: 10px auto;
+    border: 1px #CCC solid;
+    text-align: center;
+    border-radius: 5px;
 }
 
 button {
