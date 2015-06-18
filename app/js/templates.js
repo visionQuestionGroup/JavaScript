@@ -7,6 +7,10 @@ this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + "\n</h1>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
+this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    return "<h2>Sup</h2>\n";
+},"useData":true});
+this["hbs"] = this["hbs"] || {};
 this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "\n<h2>Sign Up</h2>\n\n<form id=\"signup\">\n  <input type=\"text\" placeholder=\"First Name\" id=\"firstName\">\n  <input type=\"text\" placeholder=\"Last Name\" id=\"lastName\">\n  <input type=\"text\" placeholder=\"Username\" id=\"userName\">\n  <input type=\"text\" placeholder=\"email\" id=\"email\">\n  <input type=\"text\" placeholder=\"Password\" id=\"password\">\n  <input type=\"text\" placeholder=\"Confirm Password\" id=\"confirmPassword\">\n  <button>Sign Up!</button>\n</form>\n";
+    return "\n<h2>Sign Up</h2>\n\n<form id=\"signup\">\n  <input type=\"text\" class=\"input\" placeholder=\"First Name\" id=\"firstName\">\n  <input type=\"text\" class=\"input\" placeholder=\"Last Name\" id=\"lastName\">\n  <input type=\"text\" class=\"input\" placeholder=\"Username\" id=\"userName\">\n  <input type=\"text\" class=\"input\" placeholder=\"email\" id=\"email\">\n  <input type=\"text\" class=\"input\" placeholder=\"Password\" id=\"password\">\n  <input type=\"text\" class=\"input\" placeholder=\"Confirm Password\" id=\"confirmPassword\">\n  <button>Sign Up!</button>\n</form>\n";
 },"useData":true});
