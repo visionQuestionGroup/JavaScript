@@ -10,7 +10,7 @@
    window.app.Routers = {};
 
    // Root URL
-   app.rootURL = appEndpoint;
+   // app.rootURL = appEndpoint;
 
   // For auth. token
   /*$.ajaxSetup({

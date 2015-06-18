@@ -10,7 +10,7 @@
 
     },
 
-      routes: {
+  routes: {
       '' : 'homePage',
       'visionQuestion/:id' : 'viewQuestion',
       'scoreboard' : 'scoreboard',
@@ -18,7 +18,7 @@
       'signup' : 'signUp',
       // 'edit/:id' : 'editQuest',
       '*path' : 'errorPage'
-    },
+  },
 
     signUp: function () {
       new app.Views.signup();

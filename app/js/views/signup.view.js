@@ -5,7 +5,7 @@
 
   app.Views.SignUpeView = Backbone.View.extend({
 
-    className: 'signup',
+    className: 'signUp',
 
     template: hbs.signup,
 
@@ -13,28 +13,28 @@
       'click #signup' : 'signup',
     },
 
-    initialize: function (options) {
+  initialize: function (options) {
 
-      var args = options || {};
+    var args = options || {};
 
-      this.collection = args.collection;
+    this.collection = args.collection;
 
-      this.render();
-      $('.container').html(this.el);
-    },
+    this.render();
+    $('.container').html(this.el);
+  },
 
-    render: function(){
+  render: function(){
 
-      this.$el.html(this.template({ signup: this.collection.toJSON() }));
+    this.$el.html(this.template({ signup: this.collection.toJSON() }));
 
-    },
+  },
 
-    addUser: function (event) {
+  addUser: function (event) {
 
-      event.preventDefault();
+    event.preventDefault();
+  }
 
-
-    });
+  });
 
 
 
