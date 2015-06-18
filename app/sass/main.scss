@@ -1,4 +1,10 @@
-@import '../css/vendor/foundation/foundation';
+// Import Vendor Files
+
+@import '../css/vendor/foundation';
+
+
+
+// General Styling
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -8,8 +14,11 @@ body {
   text-align: center;
 }
 
+
+
+// Nav Bar
+
 nav {
-  height: 100px;
   background-color: #DDDDDD;
   border-bottom: 1px black solid;
 }
@@ -21,13 +30,18 @@ nav {
   font-weight: bold;
 }
 
+
+// Sign Up View
+
+.signupForm {
+  text-align: center;
+  margin: 10px auto;
+}
+
 .input {
   margin: 10px auto;
-  display: block;
-  height: 50px;
-  width: 500px;
-  border-radius: 5px;
   border: 1px #CCC solid;
+  text-align: center;
 }
 
 button {
