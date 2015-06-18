@@ -6709,8 +6709,7 @@ th.hide-for-touch {
 body {
   text-align: center; }
 
-nav {
-  background-color: #DDDDDD;
+.top-bar {
   border-bottom: 1px black solid; }
 
 .logo {
@@ -6723,10 +6722,17 @@ nav {
   text-align: center;
   margin: 10px auto; }
 
-.input {
+input[type="text"] {
   margin: 10px auto;
   border: 1px #CCC solid;
-  text-align: center; }
+  text-align: center;
+  border-radius: 5px; }
+
+input[type="password"] {
+  margin: 10px auto;
+  border: 1px #CCC solid;
+  text-align: center;
+  border-radius: 5px; }
 
 button {
   height: 50px;
