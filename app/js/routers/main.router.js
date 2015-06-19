@@ -24,12 +24,17 @@
       new app.Views.Main({
         collection: this.collection
       });
+      new app.Views.NavView({
+      });
     },
 
     signUp: function () {
       new app.Views.SignUpView({
-        collection: this.userscollection
+        // collection: this.userscollection
       });
+      new app.Views.NavView({
+      });
+
     },
 
     errorPage: function () {
