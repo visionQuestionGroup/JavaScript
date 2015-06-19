@@ -31,6 +31,11 @@
         collection: this.userscollection
       });
     },
+    scoreboard: function () {
+      new app.Views.Scoreboard({
+        collection: this.collection
+      });
+    },
 
     errorPage: function () {
       $('.container').html('404 Not Found');
