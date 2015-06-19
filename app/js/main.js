@@ -6,11 +6,8 @@
 
   var isLoggedIn = Cookies.get('access_token');
 
-  if ( isLoggedIn !== undefined ){
-    console.log('Yep, logged in');
-   } else {
-    console.log('Nope, not logged in');
-   }
+  window.isLoggedIn = isLoggedIn;
+
 
   /////////////////////////// Create new instance of Users collection ///////////////////////////
 

@@ -40,6 +40,8 @@
       new app.Views.Scoreboard({
         collection: this.collection
       });
+      new app.Views.NavView({
+      });
     },
 
     errorPage: function () {
