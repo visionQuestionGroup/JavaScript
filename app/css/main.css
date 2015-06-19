@@ -6739,8 +6739,23 @@ input[type="password"] {
 
 button {
   height: 50px;
-  width: 500px;
+  width: 397px;
   border-radius: 5px;
   background-color: #9A5BF4;
   color: #EEE;
   border: 1px #CCC solid; }
+
+.score form {
+  display: inline-block;
+  width: 470px;
+  height: 50px;
+  margin-top: 1px;
+  border-radius: 5px; }
+
+.score ul {
+  list-style: none;
+  background-color: beige; }
+
+.score li {
+  margin-bottom: 5px;
+  margin-left: 20px; }

@@ -2,6 +2,7 @@
 
     "use strict";
 
+
   app.Views.NavView = Backbone.View.extend({
 
     className: 'nav',
@@ -25,7 +26,10 @@
 
   });
 
-  app.Views.Main = Backbone.View.extend({
+
+
+  app.Views.Scoreboard = Backbone.View.extend({
+
 
     className: 'scoreboard',
 
@@ -35,7 +39,7 @@
 
       var args = options || {};
 
-      this.collection = args.collection;
+
 
       this.render();
       $('.container').html(this.el);
@@ -43,6 +47,10 @@
 
     render: function () {
       this.$el.html(this.template);
+
+      // var scoresRes = this.collection.get(this.??Id);
+
+      // this.$el.html(this.template(??.toJSON()));
     },
 
 
