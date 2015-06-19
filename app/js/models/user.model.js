@@ -4,7 +4,7 @@
 
   app.Models.User = Backbone.Model.extend({
 
-    idAttribute: '_id', // Because of our use of MongoDB,
+    idAttribute: '_id',
 
     defaults:  {
       username: '',
