@@ -6,15 +6,11 @@
 
   var isLoggedIn = Cookies.get('access_token');
 
-  if ( isLoggedIn !== undefined ){
-    console.log('Yep, logged in');
-   } else {
-    console.log('Nope, not logged in');
-   }
+  window.isLoggedIn = isLoggedIn;
+
 
   // var allGuesses = new app.Collections.Guesses();
   // var allPosts = new app.Collections.Posts();
-
 
 
   // allPosts.fetch().done( function () {
