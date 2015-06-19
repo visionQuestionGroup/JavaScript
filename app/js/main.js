@@ -2,6 +2,11 @@
 
   'use strict';
 
+  $('.accordion').on ('click', function(){
+    $('.accordion').removeClass('thissection');
+    $(this).addClass('thissection');
+  });
+
   // var allGuesses = new app.Collections.Guesses();
   // var allPosts = new app.Collections.Posts();
 
