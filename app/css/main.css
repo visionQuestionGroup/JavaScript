@@ -6776,17 +6776,17 @@ button {
   color: #EEE;
   border: 1px #CCC solid; }
 
-.score form {
-  display: inline-block;
-  width: 470px;
-  height: 50px;
-  margin-top: 1px;
-  border-radius: 5px; }
-
-.score ul {
-  list-style: none;
-  background-color: beige; }
-
-.score li {
-  margin-bottom: 5px;
-  margin-left: 20px; }
+.score {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center; }
+  .score form {
+    display: inline-block;
+    width: 470px;
+    height: 50px;
+    margin-top: 1px;
+    border-radius: 5px; }
+  .score ul {
+    list-style: none;
+    background-color: beige; }
+  .score li {
+    margin-bottom: 5px; }
