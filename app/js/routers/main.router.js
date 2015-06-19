@@ -26,15 +26,10 @@
       });
     },
 
-    viewQuestion: function (id) {
-      new app.Views.ViewQuestionView({
-        singleId: id,
-        collection: this.collection
-      });
-    },
-
     signUp: function () {
-      new app.Views.SignUpView();
+      new app.Views.SignUpView({
+        collection: this.userscollection
+      });
     },
 
     errorPage: function () {
