@@ -1,6 +1,6 @@
-;( function (){
+;(function () {
 
-    "use strict";
+  'use strict';
 
   app.Views.NavView = Backbone.View.extend({
 
@@ -29,50 +29,52 @@
 
     className: 'main',
 
-    events: {
-      'submit #addBookmark' : 'addBookmark'
-    },
+    // events: {
+    //   'submit #addPost'    : 'addPost'
+    // },
 
     template: hbs.main,
 
-    initialize: function (options) {
-
+    initialize: function(options) {
       var args = options || {};
-
       this.collection = args.collection;
 
       this.render();
       $('.container').html(this.el);
     },
 
-    render: function () {
-      this.$el.html(this.template);
+    render: function() {
+      this.$el.html(this.template({post: this.collection.toJSON()}));
     },
 
-    addBookmark: function (event) {
-
+    addPost: function(event) {
       event.preventDefault();
 
-      // Grab our form and form values
-      var self = this,
+      // Get form and form values
+      var that = this,
           form = $(event.target),
-          title = form.find('#bookmarkTitle').val(),
-          url = form.find('#bookmarkURL').val();
+          imgUrl = form.find('#imgUrl').val(),
+          answer = form.find('#answer').val();
 
-      // Create a Instance
-      var b = new app.Models.Bookmark({
-        url: url,
-        title: title
+      // Create post instance
+      var p = new app.Models.Post({
+        imgUrl: imgUrl,
+        answer: answer,
       });
 
-      // Add instance to our
-      this.collection.add(b).save().success( function () {
-        self.render();
-      });
-
+      // Add instance to collection and save to database
+      this.collection.add(p).save().success(function() {
+        that.render();
+      })
     }
 
   });
 
 }());
+
+
+// $('.accordion').on ('click', function(){
+//   $('.accordion').removeClass('thissection');
+//   $(this).addClass('thissection');
+// });
 
