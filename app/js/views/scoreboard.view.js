@@ -48,9 +48,9 @@
     render: function () {
       this.$el.html(this.template);
 
-      // var scoresRes = this.collection.get(this.??Id);
+      // var scoresRes = this.collection.get(this./topscores);
 
-      // this.$el.html(this.template(??.toJSON()));
+      // this.$el.html(this.template(/topscores.toJSON()));
     },
 
 

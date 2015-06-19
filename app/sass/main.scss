@@ -110,24 +110,22 @@ button {
 // Scoreboard View
 
 .score{
-
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
   form{
     display: inline-block;
-    // text-align: center;
     width: 470px;
     height: 50px;
     margin-top: 1px;
     border-radius: 5px;
 
-  }
+    }
   ul{
     list-style: none;
-    // display: inline-block;
     background-color: beige;
   }
   li{
     margin-bottom: 5px;
-    margin-left: 20px;
   }
 }
 

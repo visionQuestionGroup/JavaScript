@@ -18,41 +18,47 @@ this["hbs"] = this["hbs"] || {};
 this["hbs"]["scoreboard"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"score\">\n<h2>visionQuestion Scoreboard</h2>\n\n<div class=\"scoretitle\">\n\n  <h4>Top Ten Leaders</h4>\n\n</div>\n<form>\n  <ul>\n    <li>User: <span>Mr Test</span> Score: <span>40</span></li>\n    <li>User: <span>Test John</span> Score: <span>16</span></li>\n    <li><span>"
+  return "<div class=\"score\">\n<h2>visionQuestion Scoreboard</h2>\n\n<div class=\"scoretitle\">\n\n  <h4>Top Ten Leaders</h4>\n\n</div>\n<form>\n  <ul>\n    <li>User: <span>Mr Test</span>  Score: <span>40</span></li>\n    <li>User: <span>Test John </span>  Score: <span>16</span></li>\n\n    <li><span>User:"
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span> <span>"
+    + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span></li>\n    <li><span>User:"
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span></li>\n    <li><span>User:"
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span></li>\n    <li><span>User:"
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span></li>\n    <li><span>User:"
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span></li>\n    <li><span>User:"
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span></li>\n    <li><span>User:"
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span></li>\n    <li><span>User:"
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>"
+    + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n  </ul>\n</form>\n\n</div>\n\n";
+    + "</span></li>\n    <li><span>User:"
+    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
+    + "</span>  <span> Score: "
+    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
+    + "</span></li>\n    <li><span>User:"
+    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
+    + "</span>  <span> Score: "
+    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
+    + "</span></li>\n\n  </ul>\n</form>\n    <h4>Thank you for playing</h4>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
