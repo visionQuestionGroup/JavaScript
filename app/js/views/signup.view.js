@@ -10,74 +10,78 @@
     template: hbs.signup,
 
     events: {
-      'click #signup' : 'signUp',
+      'submit #signup' : 'addUser',
     },
 
 
 
-  initialize: function (options) {
+    initialize: function (options) {
 
-    var args = options || {};
+      var args = options || {};
 
-    this.collection = args.collection;
+      this.render();
 
-    this.render();
-    $('.container').html(this.el);
-  },
-
-
-  render: function(){
-
-    this.$el.html(this.template);
-
-  },
+      $('.container').html(this.el);
+    },
 
 
+    render: function(){
 
-  addUser: function (event) {
+      this.$el.html(this.template);
 
-    event.preventDefault();
+    },
 
-    // Grabs values from form inputs
 
-    var form = $(event.target),
-        firstName = form.find('#firstName').val(),
-        lastName = form.find('#lastName').val(),
-        userName = form.find('#userName').val(),
-        email = form.find('#email').val(),
-        password = form.find('#password').val(),
-        confirm = form.find('#confirmPassword').val()
+
+    addUser: function (event) {
+
+      event.preventDefault();
+
+      console.log(this);
+
+      // Grabs values from form inputs
+
+      if (password == confirm) {
+
+        var form = $(event.target),
+            firstName = form.find('#firstName').val(),
+            lastName = form.find('#lastName').val(),
+            userName = form.find('#userName').val(),
+            email = form.find('#email').val(),
+            password = form.find('#password').val(),
+            confirm = form.find('#confirmPassword').val();
+
+      // Creates new user instance
+
+        var u = new app.Models.User({
+            first_name: firstName,
+            last_name: lastName,
+            user_name: userName,
+            email: email,
+            password: password,
+        });
+
+      // Adds instance of user to collection database
+
+        var signUp = new app.Collections.Users();
+
+        signUp.add(u).save().success(function(data){
+            Cookies.set('access_token', data.access_token);
+            Cookies.set('username', data.username);
+        });
+
+        signUp.add(u).save().success( function () {
+          $('#successMsg').append('<h3>Congrats, you set up an account!</h3>');
+        });
+
+      $('#signup')[0].reset();
+
+      }
     }
-
-    // Creates new user instance
-
-    // var u = new app.Models.User({
-    //     firstName: firstName,
-    //     lastName: lastName,
-    //     userName: userName,
-    //     email: email,
-    //     password: password,
-    //   });
-
-    // Adds instance of user to collection
-
-    // if (password == confirm) {
-
-    //    this.collection.add(u).save().success(function(data){
-    //       Cookies.set('access_token', data.access_token);
-    //       Cookies.set('username', data.username);
-
-    //    });
-
-    // }
-
-    });
+  });
 
 
-
-
-
-  }());
+}());
 
 
 
