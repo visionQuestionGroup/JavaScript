@@ -2,7 +2,7 @@
 
   'use strict';
 
-  //Check for login
+  /////////////////////////// Check for login ///////////////////////////
 
   var isLoggedIn = Cookies.get('access_token');
 
@@ -12,19 +12,43 @@
     console.log('Nope, not logged in');
    }
 
-  // var allGuesses = new app.Collections.Guesses();
-  // var allPosts = new app.Collections.Posts();
+  /////////////////////////// Create new instance of Users collection ///////////////////////////
 
+  var allUsers = new app.Collections.Users();
 
+  allUsers.fetch().done(function(){
 
-  // allPosts.fetch().done( function () {
+    new app.Routers.MainRouter({
+      collection: allUsers
+    });
+    Backbone.history.start();
 
-  app.mainRouter = new app.Routers.MainRouter({
-      // collection: allPosts
   });
 
-  Backbone.history.start();
+  /////////////////////////// Create new instance of Posts collection ///////////////////////////
 
-  // });
+  var allPosts = new app.Collections.Posts();
+
+  allPosts.fetch().done(function(){
+
+    new app.Routers.MainRouter({
+      collection: allPosts,
+    });
+    Backbone.history.start();
+
+  });
+
+  /////////////////////////// Create new instance of Guesses collection ///////////////////////////
+
+  var allGuesses = new app.Collections.Guesses();
+
+  allGuesses.fetch().done(function(){
+
+    new app.Routers.MainRouter({
+      collection: allGuesses
+    });
+    Backbone.history.start();
+
+  });
 
 }());
