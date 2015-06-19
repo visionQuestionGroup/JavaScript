@@ -14,6 +14,43 @@ body {
   text-align: center;
 }
 
+.wrapper {
+  overflow: hidden;
+  border-radius: 3px;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 75%;
+  margin-bottom: 35px;
+}
+
+section.accordion {
+  overflow: hidden;
+  height: 33px;
+  transition: all 2s ease;
+  border: 1px solid #64B255;
+
+  .thissection {
+  height: 250px;
+}
+}
+
+section header {
+  background-color: #64B255;
+  border-bottom: 1px solid #64B255;
+  padding: 3px;
+  color: white;
+  font-size: 1em;
+}
+
+section header:hover {
+  cursor: pointer;
+  background-color: #64B255;
+}
+
+section p {
+  color: grey;
+  font-size: 0.75em;
+}
+
 
 
 // Nav Bar
@@ -21,6 +58,7 @@ body {
 .top-bar {
   // background-color: #DDDDDD;
   border-bottom: 1px black solid;
+  margin-bottom: 35px;
 }
 
 .logo {
@@ -35,7 +73,7 @@ body {
 
 .container {
   img {
-    margin: 15px;
+    margin: 5px;
   }
 }
 

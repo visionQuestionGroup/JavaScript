@@ -3,6 +3,32 @@
   'use strict';
 
 
+  app.Views.NavView = Backbone.View.extend({
+
+    className: 'nav',
+
+    template: hbs.nav,
+
+    initialize: function (options) {
+
+      var args = options || {};
+
+      this.render();
+
+      $('#nav').html(this.el);
+
+    },
+
+    render: function(){
+
+      this.$el.html(this.template);
+
+    }
+
+  });
+
+
+
   app.Views.SignUpView = Backbone.View.extend({
 
     className: 'signUp',
@@ -66,12 +92,9 @@
         var signUp = new app.Collections.Users();
 
         signUp.add(u).save().success(function(data){
+            $('#successMsg').append('<h3>Congrats, you set up an account!</h3>');
             Cookies.set('access_token', data.access_token);
             Cookies.set('username', data.username);
-        });
-
-        signUp.add(u).save().success( function () {
-          $('#successMsg').append('<h3>Congrats, you set up an account!</h3>');
         });
 
       $('#signup')[0].reset();

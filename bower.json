@@ -22,7 +22,8 @@
     "handlebars": "~3.0.3",
     "backbone": "~1.2.1",
     "cookies-js": "~1.2.1",
-    "foundation": "~5.5.2"
+    "foundation": "~5.5.2",
+    "Cookies": "~1.2.1"
   },
   "devDependencies": {
     "mocha": "~2.2.5",
