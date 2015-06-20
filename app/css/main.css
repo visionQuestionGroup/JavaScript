@@ -6749,6 +6749,9 @@ section p {
   font-size: 36px;
   font-weight: bold; }
 
+.greeting span {
+  color: white; }
+
 .container img {
   margin: 5px; }
 
