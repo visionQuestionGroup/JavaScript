@@ -7,9 +7,7 @@
 
     model: app.Models.Guess,
 
-    // comparator: '',
-
-    // url:
+    url: app.rootURL + 'guesses'
 
   });
 
