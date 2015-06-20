@@ -1,7 +1,6 @@
 ;(function (){
 
-    'use strict';
-    // Initial posts collections
+  'use strict';
 
   console.log('this is my posts collection');
 
@@ -12,16 +11,6 @@
 
       url: app.rootURL + 'posts/all'
 
-    /*
-    comparator: '',
-
-    url: 'https://vast-wildwood-6662.herokuapp.com//posts/all'
-    */
-
   });
-
-
-
-
 
 }());
