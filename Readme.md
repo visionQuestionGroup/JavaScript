@@ -1,6 +1,6 @@
-## Welcome to My Repo
+## Group 1 Javascript team Meade, Jim and Vi
 
-> I am your Readme.md file, you should probably update me.
+>
 
 
 ## Usage
