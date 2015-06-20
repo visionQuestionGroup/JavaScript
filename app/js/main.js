@@ -4,11 +4,9 @@
 
   //Check for login
 
-  var isLoggedIn = Cookies.get('access_token');
+  window.isLoggedIn = Cookies.get('access_token');
 
-  window.isLoggedIn = isLoggedIn;
-
-  var greeting = function(){
+  window.greeting = function(){
     if (isLoggedIn !== undefined){
       return "Welcome, user!";
     }
@@ -16,8 +14,6 @@
       return "You must log in to play!";
     }
   };
-
-  window.greeting = greeting;
 
   var allUsers = new app.Collections.Users();
   var allPosts = new app.Collections.Posts();

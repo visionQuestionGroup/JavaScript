@@ -8,8 +8,7 @@
 
     comparator: 'username',
 
-    url: ' https://vast-wildwood-6662.herokuapp.com/users/register'
-
+    url: app.rootURL + 'users'
 
   });
 
