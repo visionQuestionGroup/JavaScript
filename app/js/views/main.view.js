@@ -2,18 +2,15 @@
 
   'use strict';
 
-
-  ///////////////////////////////////// MAIN VIEW ////////////////////////////////////////////////
-
   app.Views.Main = Backbone.View.extend({
 
     className: 'main',
 
-    // events: {
-    //   'click img'         : 'guessAnswer',
-    //   'click '            :
-    //   'submit #addPost'   : 'addPost'
-    // },
+    events: {
+      // 'click img'         : 'guessAnswer',
+      // 'click '            :
+      // 'submit #addPost'   : 'addPost'
+    },
 
     template: hbs.main,
 
@@ -26,7 +23,6 @@
     },
 
     render: function() {
-      console.log('rendering');
       this.$el.html(this.template({post: this.postsCollection.toJSON()}));
     },
 

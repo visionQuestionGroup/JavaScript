@@ -36,9 +36,19 @@
       new app.Views.SignUpView({});
       new app.Views.NavView({});
     },
+
+    viewQuestion: function(id) {
+      console.log('entering viewQuestion function');
+      new app.Views.ViewQuestion({
+        postId: id,
+        postsCollection: this.postsCollection
+      });
+      new app.Views.NavView({});
+    },
+
     scoreboard: function() {
       new app.Views.Scoreboard({
-          collection: this.collection
+        collection: this.collection
       });
       new app.Views.NavView({});
     },
