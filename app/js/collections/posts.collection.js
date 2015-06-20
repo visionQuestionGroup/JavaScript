@@ -1,15 +1,22 @@
-;( function (){
+;(function (){
 
-    "use strict";
+    'use strict';
     // Initial posts collections
+
+  console.log('this is my posts collection');
+
 
     app.Collections.Posts = Backbone.Collection.extend({
 
-    model: app.Models.Post,
+      model: app.Models.Post,
 
-    // comparator: '',
+      url: 'http://tiy-515.herokuapp.com/collections/joyave_image_dummy'
 
-    url: 'https://vast-wildwood-6662.herokuapp.com/users/register'
+    /*
+    comparator: '',
+
+    url: 'https://vast-wildwood-6662.herokuapp.com//posts/all'
+    */
 
   });
 
