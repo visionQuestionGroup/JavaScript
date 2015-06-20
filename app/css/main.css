@@ -6739,18 +6739,50 @@ section p {
   color: grey;
   font-size: 0.75em; }
 
-.top-bar {
-  border-bottom: 1px black solid;
-  margin-bottom: 35px; }
+#nav {
+  height: 100px;
+  background-color: black; }
 
 .logo {
-  text-align: center;
-  margin: 10px auto;
-  font-size: 36px;
-  font-weight: bold; }
+  display: inline-block;
+  float: left;
+  margin-left: 15px; }
 
-.greeting span {
-  color: white; }
+.navList {
+  list-style-type: none; }
+
+.greeting {
+  display: inline-block;
+  float: left;
+  margin-top: 30px;
+  margin-left: 15px;
+  font-style: italic;
+  color: #ddd; }
+
+nav form {
+  display: inline-block;
+  float: right; }
+
+.userNameLogin input[type="text"] {
+  width: 150px;
+  display: inline-block;
+  float: right;
+  margin: 20px 10px; }
+
+.passwordLogin input[type="password"] {
+  width: 150px;
+  display: inline-block;
+  float: right;
+  margin: 20px 10px; }
+
+.loginBtn {
+  display: inline-block;
+  float: right;
+  width: 150px;
+  border-radius: 5px;
+  height: 37px;
+  margin: 20px 10px;
+  vertical-align: middle; }
 
 .container img {
   margin: 5px; }
@@ -6771,7 +6803,7 @@ input[type="password"] {
   text-align: center;
   border-radius: 5px; }
 
-button {
+#signup button {
   height: 50px;
   width: 397px;
   border-radius: 5px;
