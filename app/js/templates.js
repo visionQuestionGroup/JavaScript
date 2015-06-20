@@ -4,11 +4,11 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "\n      <li data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n        <div class=\"postview\">\n          <a href=\"#post/"
+    + "\">\n        <div class=\"postview\">\n          <a href=\"#visionQuestion/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(alias4(((stack1 = (depth0 != null ? depth0.post_info : depth0)) != null ? stack1.image_url : stack1), depth0))
-    + "\"></a>\n          <a href=\"#post/"
+    + "\"></a>\n          <a href=\"#visionQuestion/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><div class=\"opacity\"></div></a>\n          <p>Taken by: "
     + alias3(alias4(((stack1 = (depth0 != null ? depth0.creator : depth0)) != null ? stack1.user_name : stack1), depth0))
@@ -44,5 +44,13 @@ this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["viewquestion"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "";
+    var stack1, helper, alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "<div class=\"singleview\">\n\n  <img src=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.post_info : depth0)) != null ? stack1.image_url : stack1), depth0))
+    + "\">\n <p>Taken by: "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.creator : depth0)) != null ? stack1.user_name : stack1), depth0))
+    + "</p>\n\n\n  <button id=\"hint\" data-id=\""
+    + alias2(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\">Hint</button>\n\n</div>\n";
 },"useData":true});

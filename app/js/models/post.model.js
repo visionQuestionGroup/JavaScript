@@ -6,6 +6,7 @@
 
 
     defaults:  {
+      id: '',
       user_name: '',
       image_url: '',
       answer: ''
