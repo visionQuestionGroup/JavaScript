@@ -6,6 +6,8 @@
 
     initialize: function(options) {
 
+      var args = options || {};
+
       this.usersCollection = args.usersCollection;
       this.postsCollection = args.postsCollection;
       this.guessesCollection = args.guessesCollection;

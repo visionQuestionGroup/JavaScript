@@ -2,22 +2,22 @@
   <div class="row">
     <div class="small-12 small-centered columns rulesandupload">
 
-      <section class="accordion thissection">
-        <header id="head3">How to play</header>
+      <div class="accordion thissection">
+        <header id="howToPlay">How to play</header>
 
         <p id="para3">How to play instruction.</p>
-      </section>
+      </div> {{!-- End howToPlay --}}
 
-      <section class="accordion">
-        <header id="head2">Add Post</header>
+      <div class="accordion">
+        <header id="addPost">Add Post</header>
 
         <form id="addPhoto">
           <input type="text" placeholder="Photo URL" id="photoURL">
           <input type="text" placeholder="Answer" id="answer">
           <button class="btn waves-effect waves-light" type="submit" name="action">Submit
           <i class="mdi-content-send right"></i></button>
-        </form>
-      </section>
+        </form> {{!-- End addPhoto --}}
+      </div> {{!-- End accordion div --}}
     </div>
   </div>
 </div>
@@ -34,16 +34,16 @@
 </div>
 
 <div class="row">
-  <div class="small-12 medium-6 large-4 columns">
+  <div class="columns">
 
     <ul>
       {{#each post}}
 
-      <li data-id="{{_id}}">
+      <li data-id="{{id}}">
         <div class="postview">
-          <a href="#post/{{_id}}"><img src="{{image_url}}"></a>
-          <a href="#post/{{_id}}"><div class="opacity"></div></a>
-          <p>Taken by: {{username}}</p>
+          <a href="#post/{{id}}"><img src="{{post_info.image_url}}"></a>
+          <a href="#post/{{id}}"><div class="opacity"></div></a>
+          <p>Taken by: {{creator.user_name}}</p>
         </div>
       </li>
 
@@ -51,22 +51,3 @@
     </ul>
   </div>
 </div>
-
-{{!-- <div class="row">
-  <div class="small-12 medium-6 large-4 columns">
-    <img src="http://placehold.it/290x290">
-    <img src="http://placehold.it/290x290">
-    <img src="http://placehold.it/290x290">
-  </div>
-  <div class="small-12 medium-6 large-4 columns">
-    <img src="http://placehold.it/290x290">
-    <img src="http://placehold.it/290x290">
-    <img src="http://placehold.it/290x290">
-  </div>
-  <div class="small-12 medium-6 large-4 columns">
-    <img src="http://placehold.it/290x290">
-    <img src="http://placehold.it/290x290">
-    <img src="http://placehold.it/290x290">
-  </div>
-</div>
- --}}

@@ -10,20 +10,20 @@
 
     template: hbs.nav,
 
-  initialize: function (options) {
+    initialize: function (options) {
 
-    var args = options || {};
+      var args = options || {};
 
-    this.render();
+      this.render();
 
-    $('#nav').html(this.el);
-  },
+      $('#nav').html(this.el);
+    },
 
-  render: function(){
+    render: function(){
 
-    this.$el.html(this.template);
+      this.$el.html(this.template);
 
-  }
+    }
 
   });
 
@@ -43,7 +43,6 @@
 
     initialize: function(options) {
       var args = options || {};
-      console.log(args);
       this.postsCollection = args.postsCollection;
 
       this.render();
