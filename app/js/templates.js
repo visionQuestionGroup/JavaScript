@@ -24,9 +24,9 @@ this["hbs"] = this["hbs"] || {};
 this["hbs"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;
 
-  return "<nav>\n\n  <h1 class=\"logo\"><a href=\"#\">visionQuestion</a></h1>\n\n    <ul class=\"navList\">\n\n      <li class=\"\">\n        <span class=\"greeting\">"
+  return "<nav>\n\n  <h1 class=\"logo\"><a href=\"#\">visionQuestion</a></h1>\n\n  <span class=\"greeting\">"
     + this.escapeExpression(((helper = (helper = helpers.greeting || (depth0 != null ? depth0.greeting : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"greeting","hash":{},"data":data}) : helper)))
-    + "</span>\n      </li>\n\n          <button class=\"loginBtn\" id=\"signIn\" type=\"button\">Sign In</button>\n\n          <div class=\"passwordLogin\">\n            <input class=\"\" type=\"password\" id=\"pw\" placeholder=\"Password\">\n          </div>\n\n          <div class=\"userNameLogin\">\n            <input class=\"\" type=\"text\" id=\"user\" placeholder=\"Username\">\n          </div>\n\n    </ul>\n  </section>\n</nav>\n";
+    + "</span>\n\n  <span id=\"signOut\">[Sign Out]</span>\n\n  <form id=\"signIn\">\n\n    <button class=\"loginBtn\" id=\"signIn\" type=\"button\">Sign In</button>\n\n    <div class=\"passwordLogin\">\n      <input class=\"\" type=\"password\" id=\"pw\" placeholder=\"Password\">\n    </div>\n\n    <div class=\"userNameLogin\">\n      <input class=\"\" type=\"text\" id=\"user\" placeholder=\"Username\">\n    </div>\n\n  </form>\n\n</nav>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

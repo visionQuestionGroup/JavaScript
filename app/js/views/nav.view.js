@@ -11,6 +11,7 @@
 
         events: {
             'click #signIn': 'signIn',
+            'click #signOut' : 'signOut'
         },
 
         initialize: function(options) {
@@ -59,9 +60,23 @@
                 success: function(data) {
                     Cookies.set('access_token', data.access_token);
                     Cookies.set('username', data.username);
+                    console.log($('#user'));
+                    $('#signIn')[0].reset();
+                    document.location.reload();
                 }
             });
 
+        },
+
+
+        signOut: function(event) {
+
+            event.preventDefault();
+
+            Cookies.expire('access_token');
+            Cookies.expire('username');
+
+            document.location.reload();
         }
     });
 }());

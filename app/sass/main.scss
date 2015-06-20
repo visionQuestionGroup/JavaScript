@@ -26,19 +26,14 @@ body {
 // Nav Bar
 
 #nav {
-  height: 100px;
+  height: 80px;
   background-color: black;
-
 }
 
 .logo {
   display: inline-block;
   float:left;
   margin-left: 15px;
-}
-
-.navList {
-  list-style-type: none;
 }
 
 .greeting {
@@ -50,22 +45,34 @@ body {
   color: #ddd;
 }
 
-nav form {
+#signOut {
   display: inline-block;
+  float: left;
+  margin-top: 30px;
+  margin-left: 15px;
+  color: #ddd;
+}
+
+nav form {
   float: right;
+}
+
+.userNameLogin {
+  float: right;
+  display: inline-block;
 }
 
 .userNameLogin input[type="text"] {
   width: 150px;
-  display: inline-block;
-  float: right;
   margin: 20px 10px;
 }
 
+.passwordLogin {
+  float: right;
+  display: inline-block;
+}
 .passwordLogin input[type="password"] {
   width: 150px;
-  display: inline-block;
-  float: right;
   margin: 20px 10px;
 }
 
@@ -76,8 +83,6 @@ nav form {
   border-radius: 5px;
   height: 37px;
   margin: 20px 10px;
-  vertical-align: middle;
-
 }
 
 
