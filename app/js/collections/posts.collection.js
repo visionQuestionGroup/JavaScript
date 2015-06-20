@@ -10,7 +10,7 @@
 
       model: app.Models.Post,
 
-      url: 'http://tiy-515.herokuapp.com/collections/joyave_image_dummy'
+      url: 'https://vast-wildwood-6662.herokuapp.com//posts/all'
 
     /*
     comparator: '',

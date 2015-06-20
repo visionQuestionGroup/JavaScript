@@ -10,9 +10,7 @@
 
     comparator: 'username',
 
-    url: 'http://tiy-515.herokuapp.com/collections/nicktest'
-
-    // url: 'https://vast-wildwood-6662.herokuapp.com/users/register'
+    url: ' https://vast-wildwood-6662.herokuapp.com/users/register'
 
 
   });

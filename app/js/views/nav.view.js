@@ -37,6 +37,7 @@
 
             event.preventDefault();
 
+
             var url = 'https://vast-wildwood-6662.herokuapp.com/users/login/';
 
             var form = $(event.target),
@@ -48,21 +49,19 @@
                 "password": password
             }
 
+            console.log(signInfo);
+
             $.ajax({
                 url: url,
                 type: 'POST',
                 dataType: "json",
                 data: signInfo,
                 success: function(data) {
-                    console.log(["Login request details: ", data]);
-
-                    if (data.error) { // If there is an error, show the error messages
-                        $('.alert-error').text(data.error.text).show();
-                    } else { // If not, send them back to the home page
-                        window.location.replace('#');
-                    }
+                    Cookies.set('access_token', data.access_token);
+                    Cookies.set('username', data.username);
                 }
             });
+
         }
     });
 }());
