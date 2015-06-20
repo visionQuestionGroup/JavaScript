@@ -8,7 +8,7 @@
 
   window.greeting = function(){
     if (isLoggedIn !== undefined){
-      return "Welcome, user!";
+      return "Welcome, " + userName + "!";
     }
     else{
       return "You must log in to play!";
@@ -27,7 +27,7 @@
       guessesCollection: allGuesses
     });
 
-    Backbone.history.start();
+  Backbone.history.start();
 
   });
 

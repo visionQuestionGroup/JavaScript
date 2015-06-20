@@ -66,6 +66,8 @@
             $('#successMsg').append('<h3>Congrats, ' + firstName + ' you set up an account!</h3>');
         });
 
+      console.log($('#signup'));
+
       $('#signup')[0].reset();
 
       }
