@@ -8,20 +8,10 @@
 </div>
 <form>
   <ul>
-    <li>User: <span>Mr Test</span>  Score: <span>40</span></li>
-    <li>User: <span>Test John </span>  Score: <span>16</span></li>
+  {{#each user}}
 
     <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-
+    {{/each}}
   </ul>
 </form>
     <h4>Thank you for playing</h4>
