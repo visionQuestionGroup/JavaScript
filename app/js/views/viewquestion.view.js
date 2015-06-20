@@ -24,7 +24,7 @@
     },
 
     render: function() {
-      var singlePost = this.collection.get(this.postId);
+      var singlePost = this.postsCollection.get(this.postId);
       this.$el.html(this.template(singlePost.toJSON()));
     }
   });
