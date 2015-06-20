@@ -24,8 +24,8 @@
 
       // var scoresRes = this.collection.get(this./topscores);
 
-      // this.$el.html(this.template(/topscores.toJSON()));
-    },
+      // this.$el.html(this.template({user: this.collectionUsers.topscores.toJSON()}));
+    }
 
 
       });
