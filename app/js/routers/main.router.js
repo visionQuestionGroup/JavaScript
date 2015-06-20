@@ -6,7 +6,10 @@
 
     initialize: function (options) {
 
-      this.collection = options.collection;
+      var args = options || {};
+      this.usersCollection = args.usersCollection;
+      this.postsCollection = args.postsCollection;
+      this.guessesCollection = args.guessesCollection;
 
     },
 
@@ -14,7 +17,6 @@
       '' : 'homePage',
       'visionQuestion/:id' : 'viewQuestion',
       'scoreboard' : 'scoreboard',
-      'newQuest' : 'newQuest',
       'signup' : 'signUp',
       // 'edit/:id' : 'editQuest',
       '*path' : 'errorPage'
@@ -22,15 +24,17 @@
 
     homePage: function () {
       new app.Views.Main({
-        collection: this.collection
+        postsCollection: this.postsCollection,
+        usersCollection: this.usersCollection
       });
+      console.log(' created');
       new app.Views.NavView({
       });
     },
 
     signUp: function () {
       new app.Views.SignUpView({
-        // collection: this.userscollection
+        collection: this.collection
       });
       new app.Views.NavView({
       });
@@ -46,7 +50,6 @@
       $('.container').html('404 Not Found');
     }
 
-    });
+  });
 
-
-  }());
+}());

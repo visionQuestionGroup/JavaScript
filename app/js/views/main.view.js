@@ -2,6 +2,8 @@
 
   'use strict';
 
+///////////////////////////////////// NAV VIEW ////////////////////////////////////////////////
+
   app.Views.NavView = Backbone.View.extend({
 
     className: 'nav',
@@ -25,26 +27,32 @@
 
   });
 
+  ///////////////////////////////////// MAIN VIEW ////////////////////////////////////////////////
+
   app.Views.Main = Backbone.View.extend({
 
     className: 'main',
 
     // events: {
-    //   'submit #addPost'    : 'addPost'
+    //   'click img'         : 'guessAnswer',
+    //   'click '            :
+    //   'submit #addPost'   : 'addPost'
     // },
 
     template: hbs.main,
 
     initialize: function(options) {
       var args = options || {};
-      this.collection = args.collection;
+      console.log(args);
+      this.postsCollection = args.postsCollection;
 
       this.render();
       $('.container').html(this.el);
     },
 
     render: function() {
-      this.$el.html(this.template({post: this.collection.toJSON()}));
+      console.log('rendering');
+      this.$el.html(this.template({post: this.postsCollection.toJSON()}));
     },
 
     addPost: function(event) {
