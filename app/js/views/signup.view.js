@@ -2,33 +2,6 @@
 
   'use strict';
 
-
-  app.Views.NavView = Backbone.View.extend({
-
-    className: 'nav',
-
-    template: hbs.nav,
-
-    initialize: function (options) {
-
-      var args = options || {};
-
-      this.render();
-
-      $('#nav').html(this.el);
-
-    },
-
-    render: function(){
-
-      this.$el.html(this.template);
-
-    }
-
-  });
-
-
-
   app.Views.SignUpView = Backbone.View.extend({
 
     className: 'signUp',
@@ -63,11 +36,7 @@
 
       event.preventDefault();
 
-      console.log(this);
-
       // Grabs values from form inputs
-
-      if (password == confirm) {
 
         var form = $(event.target),
             firstName = form.find('#firstName').val(),
@@ -76,6 +45,8 @@
             email = form.find('#email').val(),
             password = form.find('#password').val(),
             confirm = form.find('#confirmPassword').val();
+
+        if (password == confirm) {
 
       // Creates new user instance
 
@@ -92,9 +63,7 @@
         var signUp = new app.Collections.Users();
 
         signUp.add(u).save().success(function(data){
-            $('#successMsg').append('<h3>Congrats, you set up an account!</h3>');
-            Cookies.set('access_token', data.access_token);
-            Cookies.set('username', data.username);
+            $('#successMsg').append('<h3>Congrats, ' + firstName + ' you set up an account!</h3>');
         });
 
       $('#signup')[0].reset();
