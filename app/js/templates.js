@@ -1,6 +1,24 @@
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"row wrapper\">\n  <div class=\"row\">\n    <div class=\"small-12 small-centered columns rulesandupload\">\n\n      <section class=\"accordion thissection\">\n        <header id=\"head3\">Section Three</header>\n\n        <p id=\"para3\">How to play.</p>\n      </section>\n\n      <section class=\"accordion\">\n        <header id=\"head2\">Section Two</header>\n\n        <form id=\"addPhoto\">\n          <input type=\"text\" placeholder=\"Photo URL\" id=\"photoURL\">\n          <input type=\"text\" placeholder=\"Photo Title\" id=\"photoTitle\">\n          <input type=\"text\" placeholder=\"Photo Description\" id=\"photoDesc\">\n          <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n          <i class=\"mdi-content-send right\"></i></button>\n        </form>\n      </section>\n    </div>\n  </div>\n</div>\n\n<div class=\"dropdown\">\n  <label>Contact Category:\n    <select id=\"contactCat\">\n      <option value=\"family\">Family</option>\n      <option value=\"friends\">Friends</option>\n      <option value=\"coworkers\">Work Colleagues</option>\n      <option value=\"business\">Professional Contacts</option>\n    </select> <!-- end contactCat -->\n  </label>\n</div>\n\n<div class=\"row\">\n  <div class=\"small-12 medium-6 large-4 columns\">\n    <img src=\"http://placehold.it/290x290\">\n    <img src=\"http://placehold.it/290x290\">\n    <img src=\"http://placehold.it/290x290\">\n  </div>\n  <div class=\"small-12 medium-6 large-4 columns\">\n    <img src=\"http://placehold.it/290x290\">\n    <img src=\"http://placehold.it/290x290\">\n    <img src=\"http://placehold.it/290x290\">\n  </div>\n  <div class=\"small-12 medium-6 large-4 columns\">\n    <img src=\"http://placehold.it/290x290\">\n    <img src=\"http://placehold.it/290x290\">\n    <img src=\"http://placehold.it/290x290\">\n  </div>\n</div>\n";
+this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "\n      <li data-id=\""
+    + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + "\">\n        <div class=\"postview\">\n          <a href=\"#post/"
+    + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + "\"><img src=\""
+    + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
+    + "\"></a>\n          <a href=\"#post/"
+    + alias3(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + "\"><div class=\"opacity\"></div></a>\n          <p>Taken by: "
+    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
+    + "</p>\n        </div>\n      </li>\n\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"row wrapper\">\n  <div class=\"row\">\n    <div class=\"small-12 small-centered columns rulesandupload\">\n\n      <section class=\"accordion thissection\">\n        <header id=\"head3\">How to play</header>\n\n        <p id=\"para3\">How to play instruction.</p>\n      </section>\n\n      <section class=\"accordion\">\n        <header id=\"head2\">Add Post</header>\n\n        <form id=\"addPhoto\">\n          <input type=\"text\" placeholder=\"Photo URL\" id=\"photoURL\">\n          <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n          <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n          <i class=\"mdi-content-send right\"></i></button>\n        </form>\n      </section>\n    </div>\n  </div>\n</div>\n\n<div class=\"dropdown\">\n  <label>Sort by:\n    <select id=\"sortBy\">\n      <option value=\"available\">Available</option>\n      <option value=\"completedFail\">Completed - Successful</option>\n      <option value=\"completedSuccess\">Completed - Unsuccessful</option>\n      <option value=\"myPosts\">My Posts</option>\n    </select> <!-- end contactCat -->\n  </label>\n</div>\n\n<div class=\"row\">\n  <div class=\"small-12 medium-6 large-4 columns\">\n\n    <ul>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.post : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "    </ul>\n  </div>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -11,50 +29,20 @@ this["hbs"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main
     + "</span>\n      </li>\n\n          <button class=\"loginBtn\" id=\"signIn\" type=\"button\">Sign In</button>\n\n          <div class=\"passwordLogin\">\n            <input class=\"\" type=\"password\" id=\"pw\" placeholder=\"Password\">\n          </div>\n\n          <div class=\"userNameLogin\">\n            <input class=\"\" type=\"text\" id=\"user\" placeholder=\"Username\">\n          </div>\n\n\n\n\n        </form>\n\n    </ul>\n  </section>\n</nav>\n\n\n\n\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["scoreboard"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"score\">\n<h2>visionQuestion Scoreboard</h2>\n\n<div class=\"scoretitle\">\n\n  <h4>Top Ten Leaders</h4>\n\n</div>\n<form>\n  <ul>\n    <li>User: <span>Mr Test</span>  Score: <span>40</span></li>\n    <li>User: <span>Test John </span>  Score: <span>16</span></li>\n\n    <li><span>User:"
+  return "\n    <li><span>User:"
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
     + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>User:"
-    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span>  <span> Score: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>User:"
-    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span>  <span> Score: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>User:"
-    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span>  <span> Score: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>User:"
-    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span>  <span> Score: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>User:"
-    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span>  <span> Score: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>User:"
-    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span>  <span> Score: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>User:"
-    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span>  <span> Score: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>User:"
-    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span>  <span> Score: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n    <li><span>User:"
-    + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
-    + "</span>  <span> Score: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n\n  </ul>\n</form>\n    <h4>Thank you for playing</h4>\n</div>\n\n";
+    + "</span></li>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"score\">\n<h2>visionQuestion Scoreboard</h2>\n\n<div class=\"scoretitle\">\n\n  <h4>Top Ten Leaders</h4>\n\n</div>\n<form>\n  <ul>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "  </ul>\n</form>\n    <h4>Thank you for playing</h4>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

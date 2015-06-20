@@ -1,4 +1,4 @@
-meta.foundation-version {
+  meta.foundation-version {
   font-family: "/5.5.2/"; }
 
 meta.foundation-mq-small {
@@ -6716,6 +6716,7 @@ body {
   width: 75%;
   margin-bottom: 35px; }
 
+
 section.accordion {
   overflow: hidden;
   height: 33px;
@@ -6742,6 +6743,11 @@ section p {
 #nav {
   height: 100px;
   background-color: black; }
+
+.top-bar {
+  border-bottom: 1px black solid;
+  margin-bottom: 35px; }
+
 
 .logo {
   display: inline-block;

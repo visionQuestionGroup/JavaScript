@@ -9,13 +9,15 @@
    window.app.Views = {};
    window.app.Routers = {};
 
-  // For auth. token
-  /*$.ajaxSetup({
+  app.rootURL = 'https://vast-wildwood-6662.herokuapp.com/';
+
+  // For auth token
+  $.ajaxSetup({
 
     headers: {
       'Access-Token' : Cookies.get('access_token')
     }
 
-  });*/
+  });
 
 }());
