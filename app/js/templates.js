@@ -50,7 +50,7 @@ this["hbs"]["viewquestion"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.post_info : depth0)) != null ? stack1.image_url : stack1), depth0))
     + "\">\n <p>Taken by: "
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.creator : depth0)) != null ? stack1.user_name : stack1), depth0))
-    + "</p>\n\n\n  <button id=\"hint\" data-id=\""
+    + "</p>\n\n  <input type=\"text\" id=\"guess\" placeholder=\"What's your guess?\">\n  <button type=\"submit\" name=\"action\">Submit</button>\n  <button id=\"hint\" data-id=\""
     + alias2(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\">Hint</button>\n\n</div>\n";
 },"useData":true});
