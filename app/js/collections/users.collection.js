@@ -8,7 +8,7 @@
 
     comparator: 'username',
 
-    url: 'http://tiy-515.herokuapp.com/collections/nicktest'
+    url: app.rootURL + 'users'
 
   });
 
