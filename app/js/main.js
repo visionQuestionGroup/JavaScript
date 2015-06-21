@@ -6,14 +6,6 @@
 
   window.isLoggedIn = Cookies.get('access_token');
 
-  window.greeting = function(){
-    if (isLoggedIn !== undefined){
-      return "Welcome, " + isLoggedIn+ "!";
-    }
-    else{
-      return "You must log in to play!";
-    }
-  };
 
   var allUsers = new app.Collections.Users();
   var allPosts = new app.Collections.Posts();
