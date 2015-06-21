@@ -49,7 +49,7 @@
     scoreboard: function() {
       new app.Views.Scoreboard({
 
-        collection: this.collection
+        // collection: this.collection
 
         scoreboardCollection: this.scoreboardCollection
           // collection: this.collection
