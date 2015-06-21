@@ -121,6 +121,22 @@ nav form {
   }
 }
 
+.post {
+  list-style-type: none;
+  max-width: 32%;
+  padding: 3px;
+}
+
+.post:hover {
+  border: 1px black solid;
+}
+
+.posts {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 // Sign Up View
 
 .signupForm {

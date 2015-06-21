@@ -6792,6 +6792,19 @@ nav form {
 .container img {
   margin: 5px; }
 
+.post {
+  list-style-type: none;
+  max-width: 32%;
+  padding: 3px; }
+
+.post:hover {
+  border: 1px black solid; }
+
+.posts {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto; }
+
 .signupForm {
   text-align: center;
   margin: 50px auto; }
