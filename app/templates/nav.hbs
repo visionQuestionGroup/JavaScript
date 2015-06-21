@@ -2,15 +2,27 @@
 
   {{#if isLoggedIn}}
 
-    <span id="signOutBtn">Not you? Sign out here.</span>
-
     <h1 class="logo"><a href="#">visionQuestion</a></h1>
+
+    <h3 class="link playLink"><a href="#">Play!</a></h3>
+
+    <h3 class="link signUpLink"><a href="#signup">Sign Up</a></h3>
+
+    <h3 class="link scoreLink"><a href="#scoreboard">Leaderboard</a></h3>
+
+    <span id="signOutBtn">Not you? Sign out here.</span>
 
     <span class="greeting">{{ greeting }}</span>
 
   {{else}}
 
     <h1 class="logo"><a href="#">   visionQuestion</a></h1>
+
+    <h3 class="link playLink"><a href="#">Play!</a></h3>
+
+    <h3 class="link signUpLink"><a href="#signup">Sign Up</a></h3>
+
+    <h3 class="link scoreLink"><a href="#scoreboard">Leaderboard</a></h3>
 
     <form class="signIn">
 

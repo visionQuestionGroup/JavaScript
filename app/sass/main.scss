@@ -36,10 +36,23 @@ body {
   margin-left: 15px;
 }
 
+.link {
+  float: left;
+  display: inline-block;
+  padding: 15px;
+}
+
+.logo a {
+  padding-right: 15px;
+  margin-right: 15px;
+  border-right: 1px #ddd solid;
+}
+
 .greeting {
   display: inline-block;
   float: right;
   margin: 30px 15px;
+  padding: 0;
   font-style: italic;
   color: #ddd;
 }
