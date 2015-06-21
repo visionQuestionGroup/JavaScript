@@ -29,7 +29,6 @@
               success: function(data) {
                 var name = data[0].creator.first_name;
                 $('#greetName').html(name);
-                console.log(name);
                 }
               });
         },
