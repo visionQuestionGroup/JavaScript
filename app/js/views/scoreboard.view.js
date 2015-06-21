@@ -4,7 +4,6 @@
 
   app.Views.Scoreboard = Backbone.View.extend({
 
-
     className: 'scoreboard',
 
     template: hbs.scoreboard,
@@ -12,22 +11,25 @@
     initialize: function (options) {
 
       var args = options || {};
-
-
+      this.scoreboardCollection = args.scoreboardCollection;
+      this.scoreboardCollection.fetch().done();
+      console.log(this.scoreboardCollection);
+      this.userName = args.userName;
 
       this.render();
       $('.container').html(this.el);
     },
 
     render: function () {
-      this.$el.html(this.template);
+      console.log('inside render function of scoreboard view');
 
-      // var scoresRes = this.collection.get(this./topscores);
+      // this.scoreboardCollection.fetch().done(function() {
+        var singleUser = this.scoreboardCollection.get(this.postId);
+        this.$el.html(this.template(singleUser.toJSON()));
+      // }.bind(this));
 
-      // this.$el.html(this.template({user: this.collectionUsers.topscores.toJSON()}));
     }
 
-
-      });
+  });
 
 }());

@@ -1,16 +1,13 @@
 ;( function (){
 
-    "use strict";
+  'use strict';
 
-    app.Collections.Scoreboard = Backbone.Collection.extend({
+  app.Collections.Scoreboard = Backbone.Collection.extend({
 
-    // model: app.Models.,
-
+    model: app.Models.Scoreboard,
 
     url: app.rootURL + 'topscores'
 
-    url: 'https://vast-wildwood-6662.herokuapp.com/users/topscores'
-
-
+  });
 
 }());

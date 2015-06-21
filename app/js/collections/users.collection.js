@@ -8,7 +8,7 @@
 
     comparator: 'username',
 
-    url: app.rootURL + 'users'
+    url: app.rootURL + 'users/register'
 
   });
 

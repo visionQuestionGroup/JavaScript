@@ -2,8 +2,6 @@
 
   'use strict';
 
-  console.log('we are in ViewQuestion view');
-
   app.Views.ViewQuestion = Backbone.View.extend({
 
     className: 'viewQuestion',

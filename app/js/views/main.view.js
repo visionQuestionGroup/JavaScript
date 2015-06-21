@@ -7,9 +7,8 @@
     className: 'main',
 
     events: {
-      // 'click img'         : 'guessAnswer',
       // 'click '            :
-      // 'submit #addPost'   : 'addPost'
+      'submit #addPost'   : 'addPost'
     },
 
     template: hbs.main,

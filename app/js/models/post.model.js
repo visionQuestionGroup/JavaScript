@@ -1,9 +1,8 @@
 ;( function (){
 
-    "use strict";
+    'use strict';
 
     app.Models.Post = Backbone.Model.extend({
-
 
     defaults:  {
       id: '',
