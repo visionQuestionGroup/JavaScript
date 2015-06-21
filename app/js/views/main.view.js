@@ -7,7 +7,6 @@
     className: 'main',
 
     events: {
-      // 'click '            :
       'submit #addPost'   : 'addPost'
     },
 
@@ -31,17 +30,18 @@
       // Get form and form values
       var that = this,
           form = $(event.target),
-          imgUrl = form.find('#imgUrl').val(),
+          image_url = form.find('#photoURL').val(),
           answer = form.find('#answer').val();
 
       // Create post instance
-      var p = new app.Models.Post({
-        imgUrl: imgUrl,
+      var postInstance = new app.Models.Post({
+        image_url: image_url,
         answer: answer,
       });
+      console.log(postInstance);
 
       // Add instance to collection and save to database
-      this.collection.add(p).save().success(function() {
+      this.postsCollection.add(postInstance).save({url: app.RootUrl + 'posts/new'}).success(function() {
         that.render();
       })
     }
