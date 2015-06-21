@@ -53,6 +53,7 @@
             }
 
             console.log(signInfo);
+            console.log(this);
 
             $.ajax({
                 url: url,
@@ -64,7 +65,7 @@
                     Cookies.set('username', data.username);
                     console.log($('#user'));
                     $('.signIn')[0].reset();
-                    document.location.reload();
+                    // document.location.reload();
                 }
             });
 
