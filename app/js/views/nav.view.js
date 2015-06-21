@@ -13,6 +13,7 @@
             'click #signOutBtn' : 'signOut'
         },
 
+
         initialize: function(options) {
 
             var args = options || {};
@@ -21,14 +22,23 @@
 
             $('#nav').html(this.el);
 
-
-
+            $.ajax({
+              url: 'https://vast-wildwood-6662.herokuapp.com/posts/user',
+              type: 'GET',
+              dataType: "json",
+              success: function(data) {
+                var name = data[0].creator.first_name;
+                $('#greetName').html(name);
+                console.log(name);
+                }
+              });
         },
 
 
         render: function() {
+
           var renderedTemplate = this.template({
-            greeting: greeting,
+            // greeting: userGreet(),
             isLoggedIn: isLoggedIn
           });
           this.$el.html(renderedTemplate);
@@ -63,9 +73,8 @@
                 success: function(data) {
                     Cookies.set('access_token', data.access_token);
                     Cookies.set('username', data.username);
-                    console.log($('#user'));
                     $('.signIn')[0].reset();
-                    // document.location.reload();
+                    document.location.reload();
                 }
             });
 
@@ -80,6 +89,9 @@
             Cookies.expire('username');
 
             document.location.reload();
-        }
+        },
+
+
+
     });
 }());

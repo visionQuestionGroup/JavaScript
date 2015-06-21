@@ -22,11 +22,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["nav"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    var helper;
-
-  return "\n    <h1 class=\"logo\"><a href=\"#\">visionQuestion</a></h1>\n\n    <h3 class=\"link playLink\"><a href=\"#\">Play!</a></h3>\n\n    <h3 class=\"link signUpLink\"><a href=\"#signup\">Sign Up</a></h3>\n\n    <h3 class=\"link scoreLink\"><a href=\"#scoreboard\">Leaderboard</a></h3>\n\n    <span id=\"signOutBtn\">Not you? Sign out here.</span>\n\n    <span class=\"greeting\">"
-    + this.escapeExpression(((helper = (helper = helpers.greeting || (depth0 != null ? depth0.greeting : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"greeting","hash":{},"data":data}) : helper)))
-    + "</span>\n\n";
+    return "\n    <h1 class=\"logo\"><a href=\"#\">visionQuestion</a></h1>\n\n    <h3 class=\"link playLink\"><a href=\"#\">Play!</a></h3>\n\n    <h3 class=\"link signUpLink\"><a href=\"#signup\">Sign Up</a></h3>\n\n    <h3 class=\"link scoreLink\"><a href=\"#scoreboard\">Leaderboard</a></h3>\n\n    <span id=\"signOutBtn\">Not you? Sign out here.</span>\n\n    <span class=\"greeting\">!</span>\n\n    <span id=\"greetName\"></span>\n\n    <span class=\"greeting\">Welcome, </span>\n\n\n\n";
 },"3":function(depth0,helpers,partials,data) {
     return "\n    <h1 class=\"logo\"><a href=\"#\">   visionQuestion</a></h1>\n\n    <h3 class=\"link playLink\"><a href=\"#\">Play!</a></h3>\n\n    <h3 class=\"link signUpLink\"><a href=\"#signup\">Sign Up</a></h3>\n\n    <h3 class=\"link scoreLink\"><a href=\"#scoreboard\">Leaderboard</a></h3>\n\n    <form class=\"signIn\">\n\n      <button class=\"loginBtn\" id=\"signIn\" type=\"button\">Sign In</button>\n\n      <div class=\"passwordLogin\">\n        <input class=\"\" type=\"password\" id=\"pw\" placeholder=\"Password\">\n      </div>\n\n      <div class=\"userNameLogin\">\n        <input class=\"\" type=\"text\" id=\"user\" placeholder=\"Username\">\n      </div>\n\n    </form>\n\n    <span class=\"anonMsg\">Sign in to play:</span>\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

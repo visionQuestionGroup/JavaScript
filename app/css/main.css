@@ -6738,8 +6738,18 @@ body {
 .greeting {
   display: inline-block;
   float: right;
-  margin: 30px 15px;
+  margin: 30px 0px;
   padding: 0;
+  font-size: 16px;
+  font-style: italic;
+  color: #ddd; }
+
+#greetName {
+  display: inline-block;
+  float: right;
+  margin: 30px 0px 30px 3px;
+  padding: 0;
+  font-size: 16px;
   font-style: italic;
   color: #ddd; }
 
@@ -6755,7 +6765,7 @@ body {
   float: right;
   display: inline-block;
   color: #ddd;
-  margin: 35px 15px 0px 0px;
+  margin: 35px 15px 0px 30px;
   font-size: 11px; }
 
 #signOutBtn:hover {
