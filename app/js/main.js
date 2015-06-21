@@ -25,8 +25,7 @@
     app.mainRouter = new app.Routers.MainRouter({
       usersCollection: allUsers,
       postsCollection: allPosts,
-      guessesCollection: allGuesses,
-      scoreboardCollection: scoreboard
+      guessesCollection: allGuesses
     });
 
   Backbone.history.start();

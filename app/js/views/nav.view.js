@@ -10,7 +10,7 @@
 
         events: {
             'click #signIn': 'signIn',
-            'click #signOut' : 'signOut'
+            'click #signOutBtn' : 'signOut'
         },
 
         initialize: function(options) {
@@ -21,12 +21,15 @@
 
             $('#nav').html(this.el);
 
+
+
         },
 
 
         render: function() {
           var renderedTemplate = this.template({
-            greeting: greeting
+            greeting: greeting,
+            isLoggedIn: isLoggedIn
           });
           this.$el.html(renderedTemplate);
         },

@@ -1,6 +1,10 @@
 ;(function (){
 
-    "use strict";
+  'use strict';
+
+  var allScores = new app.Collections.Scoreboard();
+
+  allScores.fetch();
 
   app.Views.Scoreboard = Backbone.View.extend({
 
@@ -11,22 +15,17 @@
     initialize: function (options) {
 
       var args = options || {};
-      this.scoreboardCollection = args.scoreboardCollection;
-      this.scoreboardCollection.fetch().done();
-      console.log(this.scoreboardCollection);
-      this.userName = args.userName;
+
+      this.collection = allScores;
 
       this.render();
       $('.container').html(this.el);
+
     },
 
     render: function () {
-      console.log('inside render function of scoreboard view');
 
-      // this.scoreboardCollection.fetch().done(function() {
-        var singleUser = this.scoreboardCollection.get(this.postId);
-        this.$el.html(this.template(singleUser.toJSON()));
-      // }.bind(this));
+      this.$el.html(this.template({users: this.collection.toJSON()}));
 
     }
 

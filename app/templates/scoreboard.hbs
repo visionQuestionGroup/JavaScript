@@ -1,18 +1,19 @@
 <div class="score">
-<h2>visionQuestion Scoreboard</h2>
+  <h2>visionQuestion Scoreboard</h2>
 
-<div class="scoretitle">
+  <div class="scoretitle">
+    <h4>Top Ten Leaders</h4>
+  </div>
 
-  <h4>Top Ten Leaders</h4>
+  <form>
+    <ul>
+      {{#each users}}
+        <li><span>User: {{user_name}}</span>  <span> Score: {{score}}</span></li>
+      {{/each}}
+    </ul>
+  </form>
 
-</div>
-<form>
-  <ul>
-  {{#each user_name}}
-    <li><span>User:{{user_name}}</span>  <span> Score: {{score}}</span></li>
-  {{/each}}
-  </ul>
-</form>
-    <h4>Thank you for playing visionQuestion</h4>
+  <h4>Thank you for playing visionQuestion</h4>
+
 </div>
 

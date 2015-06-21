@@ -21,18 +21,30 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
     + "    </ul>\n  </div>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+this["hbs"]["nav"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper;
 
-  return "<nav>\n\n  <h1 class=\"logo\"><a href=\"#\">visionQuestion</a></h1>\n\n  <span class=\"greeting\">"
+  return "\n  <span id=\"signOutBtn\">Not you? Sign out here.</span>\n\n  <h1 class=\"logo\"><a href=\"#\">visionQuestion</a></h1>\n\n  <span class=\"greeting\">"
     + this.escapeExpression(((helper = (helper = helpers.greeting || (depth0 != null ? depth0.greeting : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"greeting","hash":{},"data":data}) : helper)))
-    + "</span>\n\n  <span id=\"signOut\">[Sign Out]</span>\n\n  <form id=\"signIn\">\n\n    <button class=\"loginBtn\" id=\"signIn\" type=\"button\">Sign In</button>\n\n    <div class=\"passwordLogin\">\n      <input class=\"\" type=\"password\" id=\"pw\" placeholder=\"Password\">\n    </div>\n\n    <div class=\"userNameLogin\">\n      <input class=\"\" type=\"text\" id=\"user\" placeholder=\"Username\">\n    </div>\n\n  </form>\n\n</nav>\n";
+    + "</span>\n\n";
+},"3":function(depth0,helpers,partials,data) {
+    return "\n  <h1 class=\"logo\"><a href=\"#\">   visionQuestion</a></h1>\n\n  <form id=\"signIn\">\n\n    <button class=\"loginBtn\" id=\"signIn\" type=\"button\">Sign In</button>\n\n    <div class=\"passwordLogin\">\n      <input class=\"\" type=\"password\" id=\"pw\" placeholder=\"Password\">\n    </div>\n\n    <div class=\"userNameLogin\">\n      <input class=\"\" type=\"text\" id=\"user\" placeholder=\"Username\">\n    </div>\n\n  </form>\n\n  <span class=\"anonMsg\">Sign in to play:</span>\n\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<nav>\n\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.isLoggedIn : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(3, data, 0),"data":data})) != null ? stack1 : "")
+    + "\n</nav>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
+<<<<<<< HEAD
   return "    <li><span>User:"
+=======
+  return "\n    <li><span>User: "
+>>>>>>> dev
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
     + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
@@ -41,12 +53,16 @@ this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,par
     var stack1;
 
   return "<div class=\"score\">\n<h2>visionQuestion Scoreboard</h2>\n\n<div class=\"scoretitle\">\n\n  <h4>Top Ten Leaders</h4>\n\n</div>\n<form>\n  <ul>\n"
+<<<<<<< HEAD
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user_name : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+=======
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.users : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+>>>>>>> dev
     + "  </ul>\n</form>\n    <h4>Thank you for playing visionQuestion</h4>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "\n\n\n<form id=\"signup\">\n  <div class=\"signupForm large-4 large-centered columns\">\n    <h2>Sign Up</h2>\n    <input type=\"text\" class=\"input\" placeholder=\"First Name\" id=\"firstName\">\n    <input type=\"text\" class=\"input\" placeholder=\"Last Name\" id=\"lastName\">\n    <input type=\"text\" class=\"input\" placeholder=\"Username\" id=\"userName\">\n    <input type=\"text\" class=\"input\" placeholder=\"Email\" id=\"email\">\n    <input type=\"password\" class=\"input\" placeholder=\"Password\" id=\"password\">\n    <input type=\"password\" class=\"input\" placeholder=\"Confirm Password\" id=\"confirmPassword\">\n    <button>Sign Up!</button>\n  </div>\n</form>\n\n<div id=\"successMsg\"></div>\n";
+    return "<form id=\"signup\">\n\n  <div class=\"signupForm large-4 large-centered columns\">\n\n    <h2>Sign Up</h2>\n\n    <input type=\"text\" class=\"input\" placeholder=\"First Name\" id=\"firstName\">\n\n    <input type=\"text\" class=\"input\" placeholder=\"Last Name\" id=\"lastName\">\n\n    <input type=\"text\" class=\"input\" placeholder=\"Username\" id=\"userName\">\n\n    <input type=\"text\" class=\"input\" placeholder=\"Email\" id=\"email\">\n\n    <input type=\"password\" class=\"input\" placeholder=\"Password\" id=\"password\">\n\n    <input type=\"password\" class=\"input\" placeholder=\"Confirm Password\" id=\"confirmPassword\">\n\n    <button>Sign Up!</button>\n\n  </div>\n\n</form>\n\n<div id=\"successMsg\"></div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["viewquestion"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

@@ -49,10 +49,8 @@
 
     scoreboard: function(username) {
       new app.Views.Scoreboard({
-        userName: username,
         scoreboardCollection: this.scoreboardCollection
       });
-      console.log('inside scoreboard function in router');
       new app.Views.NavView({});
     },
 
