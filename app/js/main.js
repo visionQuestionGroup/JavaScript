@@ -8,7 +8,7 @@
 
   window.greeting = function(){
     if (isLoggedIn !== undefined){
-      return "Welcome, " + userName + "!";
+      return "Welcome, " + isLoggedIn+ "!";
     }
     else{
       return "You must log in to play!";
