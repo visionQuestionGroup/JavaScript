@@ -25,6 +25,7 @@
       usersCollection: allUsers,
       postsCollection: allPosts,
       guessesCollection: allGuesses
+
     });
 
     Backbone.history.start();

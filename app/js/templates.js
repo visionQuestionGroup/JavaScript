@@ -29,14 +29,20 @@ this["hbs"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main
     + "</span>\n      </li>\n\n          <button class=\"loginBtn\" id=\"signIn\" type=\"button\">Sign In</button>\n\n          <div class=\"passwordLogin\">\n            <input class=\"\" type=\"password\" id=\"pw\" placeholder=\"Password\">\n          </div>\n\n          <div class=\"userNameLogin\">\n            <input class=\"\" type=\"text\" id=\"user\" placeholder=\"Username\">\n          </div>\n\n    </ul>\n  </section>\n</nav>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["scoreboard"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"score\">\n<h2>visionQuestion Scoreboard</h2>\n\n<div class=\"scoretitle\">\n\n  <h4>Top Ten Leaders</h4>\n\n</div>\n<form>\n  <ul>\n\n    <li><span>User:"
+  return "\n    <li><span>User: "
     + alias3(((helper = (helper = helpers.user_name || (depth0 != null ? depth0.user_name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_name","hash":{},"data":data}) : helper)))
     + "</span>  <span> Score: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</span></li>\n  </ul>\n</form>\n    <h4>Thank you for playing visionQuestion</h4>\n</div>\n\n";
+    + "</span></li>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"score\">\n<h2>visionQuestion Scoreboard</h2>\n\n<div class=\"scoretitle\">\n\n  <h4>Top Ten Leaders</h4>\n\n</div>\n<form>\n  <ul>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.users : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "  </ul>\n</form>\n    <h4>Thank you for playing visionQuestion</h4>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

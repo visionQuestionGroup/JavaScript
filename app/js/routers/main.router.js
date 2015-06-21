@@ -38,7 +38,9 @@
     },
     scoreboard: function() {
       new app.Views.Scoreboard({
-          collection: this.collection
+        scoreboardCollection: this.scoreboardCollection
+          // collection: this.collection
+
       });
       new app.Views.NavView({});
     },
