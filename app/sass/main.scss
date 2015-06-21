@@ -51,7 +51,7 @@ body {
 .greeting {
   display: inline-block;
   float: right;
-  margin: 30px 0px;
+  margin: 25px 0px;
   padding: 0;
   font-size: 16px;
   font-style: italic;
@@ -61,7 +61,7 @@ body {
 #greetName {
   display: inline-block;
   float: right;
-  margin: 30px 0px 30px 3px;
+  margin: 25px 0px 0px 3px;
   padding: 0;
   font-size: 16px;
   font-style: italic;
@@ -77,6 +77,26 @@ body {
   font-style: italic;
 }
 
+.score {
+  display: inline-block;
+  float: right;
+  margin: 25px 8px 0px 30px;
+  padding: 0;
+  font-size: 16px;
+  font-style: italic;
+  color: #ddd;
+}
+
+.scoreBlock {
+  display: inline-block;
+  float: right;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #148DB8
+}
+
 #signOutBtn{
   float: right;
   display: inline-block;
@@ -87,7 +107,6 @@ body {
 
 #signOutBtn:hover {
   border-bottom: 1px #ddd solid;
-
 }
 
 nav form {
