@@ -1,10 +1,16 @@
 <nav>
 
+  {{#if isLoggedIn}}
+
+  <span id="signOutBtn">Not you? Sign out here.</span>
+
   <h1 class="logo"><a href="#">visionQuestion</a></h1>
 
   <span class="greeting">{{ greeting }}</span>
 
-  <span id="signOut">[Sign Out]</span>
+  {{else}}
+
+  <h1 class="logo"><a href="#">   visionQuestion</a></h1>
 
   <form id="signIn">
 
@@ -19,5 +25,9 @@
     </div>
 
   </form>
+
+  <span class="anonMsg">Sign in to play:</span>
+
+  {{/if}}
 
 </nav>
