@@ -51,7 +51,7 @@
 
         collection: this.collection
 
-        scoreboardCollection: this.scoreboardCollection
+        // scoreboardCollection: this.scoreboardCollection
           // collection: this.collection
 
 
