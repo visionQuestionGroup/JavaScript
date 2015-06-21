@@ -31,6 +31,15 @@
                 $('#greetName').html(name);
                 }
               });
+
+            $.ajax({
+              url: 'https://vast-wildwood-6662.herokuapp.com/user/score',
+              type: 'GET',
+              dataType: "json",
+              success: function(data) {
+                $('#score').html(data.score);
+                }
+              });
         },
 
 
