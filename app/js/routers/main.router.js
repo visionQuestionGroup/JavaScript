@@ -51,9 +51,6 @@
       new app.Views.Scoreboard({
 
 
-        // collection: this.collection
-
-
         scoreboardCollection: this.scoreboardCollection
       });
       new app.Views.NavView({});

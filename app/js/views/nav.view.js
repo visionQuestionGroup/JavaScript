@@ -63,7 +63,7 @@
                     Cookies.set('access_token', data.access_token);
                     Cookies.set('username', data.username);
                     console.log($('#user'));
-                    $('#signIn')[0].reset();
+                    $('.signIn')[0].reset();
                     document.location.reload();
                 }
             });

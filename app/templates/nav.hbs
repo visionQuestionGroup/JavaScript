@@ -2,31 +2,31 @@
 
   {{#if isLoggedIn}}
 
-  <span id="signOutBtn">Not you? Sign out here.</span>
+    <span id="signOutBtn">Not you? Sign out here.</span>
 
-  <h1 class="logo"><a href="#">visionQuestion</a></h1>
+    <h1 class="logo"><a href="#">visionQuestion</a></h1>
 
-  <span class="greeting">{{ greeting }}</span>
+    <span class="greeting">{{ greeting }}</span>
 
   {{else}}
 
-  <h1 class="logo"><a href="#">   visionQuestion</a></h1>
+    <h1 class="logo"><a href="#">   visionQuestion</a></h1>
 
-  <form id="signIn">
+    <form class="signIn">
 
-    <button class="loginBtn" id="signIn" type="button">Sign In</button>
+      <button class="loginBtn" id="signIn" type="button">Sign In</button>
 
-    <div class="passwordLogin">
-      <input class="" type="password" id="pw" placeholder="Password">
-    </div>
+      <div class="passwordLogin">
+        <input class="" type="password" id="pw" placeholder="Password">
+      </div>
 
-    <div class="userNameLogin">
-      <input class="" type="text" id="user" placeholder="Username">
-    </div>
+      <div class="userNameLogin">
+        <input class="" type="text" id="user" placeholder="Username">
+      </div>
 
-  </form>
+    </form>
 
-  <span class="anonMsg">Sign in to play:</span>
+    <span class="anonMsg">Sign in to play:</span>
 
   {{/if}}
 
