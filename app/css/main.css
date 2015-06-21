@@ -6717,7 +6717,7 @@ body {
   margin-bottom: 35px; }
 
 #nav {
-  height: 80px;
+  height: 70px;
   background-color: black; }
 
 .logo {
@@ -6727,18 +6727,28 @@ body {
 
 .greeting {
   display: inline-block;
-  float: left;
-  margin-top: 30px;
-  margin-left: 15px;
+  float: right;
+  margin: 30px 15px;
   font-style: italic;
   color: #ddd; }
 
-#signOut {
+.anonMsg {
   display: inline-block;
-  float: left;
+  float: right;
+  color: #ddd;
+  margin-right: 10px;
   margin-top: 30px;
-  margin-left: 15px;
-  color: #ddd; }
+  font-style: italic; }
+
+#signOutBtn {
+  float: right;
+  display: inline-block;
+  color: #ddd;
+  margin: 35px 15px 0px 0px;
+  font-size: 11px; }
+
+#signOutBtn:hover {
+  border-bottom: 1px #ddd solid; }
 
 nav form {
   float: right; }
@@ -6749,7 +6759,7 @@ nav form {
 
 .userNameLogin input[type="text"] {
   width: 150px;
-  margin: 20px 10px; }
+  margin: 18px 10px; }
 
 .passwordLogin {
   float: right;
@@ -6757,7 +6767,7 @@ nav form {
 
 .passwordLogin input[type="password"] {
   width: 150px;
-  margin: 20px 10px; }
+  margin: 18px 10px; }
 
 .loginBtn {
   display: inline-block;
@@ -6765,14 +6775,18 @@ nav form {
   width: 150px;
   border-radius: 5px;
   height: 37px;
-  margin: 20px 10px; }
+  margin: 18px 10px;
+  padding: 10px; }
 
 .container img {
   margin: 5px; }
 
 .signupForm {
   text-align: center;
-  margin: 10px auto; }
+  margin: 50px auto; }
+
+.signupForm h2 {
+  margin-bottom: 20px; }
 
 input[type="text"] {
   margin: 10px auto;

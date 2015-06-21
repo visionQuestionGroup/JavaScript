@@ -21,12 +21,20 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
     + "    </ul>\n  </div>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["nav"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+this["hbs"]["nav"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var helper;
 
-  return "<nav>\n\n  <h1 class=\"logo\"><a href=\"#\">visionQuestion</a></h1>\n\n  <span class=\"greeting\">"
+  return "\n  <span id=\"signOutBtn\">Not you? Sign out here.</span>\n\n  <h1 class=\"logo\"><a href=\"#\">visionQuestion</a></h1>\n\n  <span class=\"greeting\">"
     + this.escapeExpression(((helper = (helper = helpers.greeting || (depth0 != null ? depth0.greeting : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"greeting","hash":{},"data":data}) : helper)))
-    + "</span>\n\n  <span id=\"signOut\">[Sign Out]</span>\n\n  <form id=\"signIn\">\n\n    <button class=\"loginBtn\" id=\"signIn\" type=\"button\">Sign In</button>\n\n    <div class=\"passwordLogin\">\n      <input class=\"\" type=\"password\" id=\"pw\" placeholder=\"Password\">\n    </div>\n\n    <div class=\"userNameLogin\">\n      <input class=\"\" type=\"text\" id=\"user\" placeholder=\"Username\">\n    </div>\n\n  </form>\n\n</nav>\n";
+    + "</span>\n\n";
+},"3":function(depth0,helpers,partials,data) {
+    return "\n  <h1 class=\"logo\"><a href=\"#\">   visionQuestion</a></h1>\n\n  <form id=\"signIn\">\n\n    <button class=\"loginBtn\" id=\"signIn\" type=\"button\">Sign In</button>\n\n    <div class=\"passwordLogin\">\n      <input class=\"\" type=\"password\" id=\"pw\" placeholder=\"Password\">\n    </div>\n\n    <div class=\"userNameLogin\">\n      <input class=\"\" type=\"text\" id=\"user\" placeholder=\"Username\">\n    </div>\n\n  </form>\n\n  <span class=\"anonMsg\">Sign in to play:</span>\n\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<nav>\n\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.isLoggedIn : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(3, data, 0),"data":data})) != null ? stack1 : "")
+    + "\n</nav>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -46,7 +54,7 @@ this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,par
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "\n\n\n<form id=\"signup\">\n  <div class=\"signupForm large-4 large-centered columns\">\n    <h2>Sign Up</h2>\n    <input type=\"text\" class=\"input\" placeholder=\"First Name\" id=\"firstName\">\n    <input type=\"text\" class=\"input\" placeholder=\"Last Name\" id=\"lastName\">\n    <input type=\"text\" class=\"input\" placeholder=\"Username\" id=\"userName\">\n    <input type=\"text\" class=\"input\" placeholder=\"Email\" id=\"email\">\n    <input type=\"password\" class=\"input\" placeholder=\"Password\" id=\"password\">\n    <input type=\"password\" class=\"input\" placeholder=\"Confirm Password\" id=\"confirmPassword\">\n    <button>Sign Up!</button>\n  </div>\n</form>\n\n<div id=\"successMsg\"></div>\n";
+    return "<form id=\"signup\">\n\n  <div class=\"signupForm large-4 large-centered columns\">\n\n    <h2>Sign Up</h2>\n\n    <input type=\"text\" class=\"input\" placeholder=\"First Name\" id=\"firstName\">\n\n    <input type=\"text\" class=\"input\" placeholder=\"Last Name\" id=\"lastName\">\n\n    <input type=\"text\" class=\"input\" placeholder=\"Username\" id=\"userName\">\n\n    <input type=\"text\" class=\"input\" placeholder=\"Email\" id=\"email\">\n\n    <input type=\"password\" class=\"input\" placeholder=\"Password\" id=\"password\">\n\n    <input type=\"password\" class=\"input\" placeholder=\"Confirm Password\" id=\"confirmPassword\">\n\n    <button>Sign Up!</button>\n\n  </div>\n\n</form>\n\n<div id=\"successMsg\"></div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["viewquestion"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
