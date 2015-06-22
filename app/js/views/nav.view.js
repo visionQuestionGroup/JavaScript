@@ -66,8 +66,8 @@
                 password = $('#pw').val();
 
             var signInfo = {
-                "user_name": userName,
-                "password": password
+                "user_name": guessinfo.userName,
+                "password": guessinfo.password
             }
 
             console.log(signInfo);

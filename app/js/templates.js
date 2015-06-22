@@ -76,10 +76,12 @@ this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["viewquestion"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    var helper;
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "\n  <div>\n    <span>"
-    + this.escapeExpression(((helper = (helper = helpers.response || (depth0 != null ? depth0.response : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"response","hash":{},"data":data}) : helper)))
+    + alias3(((helper = (helper = helpers.response || (depth0 != null ? depth0.response : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"response","hash":{},"data":data}) : helper)))
+    + "</span>\n    <span>Guesses left: "
+    + alias3(((helper = (helper = helpers.guessesLeft || (depth0 != null ? depth0.guessesLeft : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"guessesLeft","hash":{},"data":data}) : helper)))
     + "</span>\n  </div>\n\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
