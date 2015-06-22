@@ -214,14 +214,22 @@ input[type="password"] {
 
 // Scoreboard View
 
-.score{
+.scored{
     font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
+
+  h2{
+    display: inline-block;
+    margin-left: 126px;
+    margin-top: 50px;
+    font-size: 44px;
+    }
   form{
     display: inline-block;
     width: 470px;
     height: 50px;
-    margin-top: 1px;
+    margin-top: 13px;
+    margin-bottom: 25px;
     border-radius: 5px;
 
     }
@@ -232,6 +240,10 @@ input[type="password"] {
   li{
     margin-bottom: 5px;
   }
+}
+.thkyou{
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 
