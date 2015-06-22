@@ -44,9 +44,9 @@ this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,par
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"score\">\n  <h2>visionQuestion Scoreboard</h2>\n\n  <div class=\"scoretitle\">\n    <h4>Top Ten Leaders</h4>\n  </div>\n\n  <form>\n    <ul>\n"
+  return "<div class=\"scored\">\n  <h2>visionQuestion Scoreboard</h2>\n\n  <div class=\"scoretitle\">\n    <h4>Top Ten Leaders</h4>\n  </div>\n\n  <form>\n    <ul>\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.users : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </ul>\n  </form>\n\n  <h4>Thank you for playing visionQuestion</h4>\n\n</div>\n\n";
+    + "    </ul>\n  </form>\n  <div class=\"thkyou\">\n  <h4>Thank you for playing visionQuestion</h4>\n  </div>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

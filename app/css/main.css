@@ -6866,17 +6866,27 @@ input[type="password"] {
   color: #EEE;
   border: 1px #CCC solid; }
 
-.score {
+.scored {
   font-family: 'Source Sans Pro', sans-serif;
   text-align: center; }
-  .score form {
+  .scored h2 {
+    display: inline-block;
+    margin-left: 126px;
+    margin-top: 50px;
+    font-size: 44px; }
+  .scored form {
     display: inline-block;
     width: 470px;
     height: 50px;
-    margin-top: 1px;
+    margin-top: 13px;
+    margin-bottom: 25px;
     border-radius: 5px; }
-  .score ul {
+  .scored ul {
     list-style: none;
     background-color: beige; }
-  .score li {
+  .scored li {
     margin-bottom: 5px; }
+
+.thkyou {
+  margin-top: 25px;
+  margin-bottom: 50px; }
