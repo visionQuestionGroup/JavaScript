@@ -2,23 +2,22 @@
 
   'use strict';
 
-  var myPostsSolved = new app.Collections.MyPostsSolved();
+  app.Views.Main = Backbone.View.extend({
 
-  myPostsSolved.fetch();
-
-  app.Views.MyPostsSolved = Backbone.View.extend({
-
-    className: 'mypostssolved',
+    className: 'postsplayable',
 
     events: {
       'submit #addPost'   : 'addPost'
     },
 
-    template: hbs.mypostssolved,
+    template: hbs.postsplayable,
 
-    initialize: function() {
+    initialize: function(options) {
 
-      this.collection = myPostsSolved;
+      var args = options || {};
+
+      this.collection = args.postsunplayableCollection;
+      this.collection.fetch();
 
       this.render();
       $('.container').html(this.el);
@@ -37,10 +36,12 @@
           answer = form.find('#answer').val();
 
       // Create post instance
+
       var postInstance = {
         image_url: image_url,
         answer: answer,
       }
+
 
       // Add instance to collection and save to database
       $.ajax({
@@ -49,6 +50,10 @@
           dataType: "json",
           data: postInstance,
           success: function() {
+
+            that.render();
+            $('#addPost')[0].reset();
+
             document.location.reload();
           }
       });

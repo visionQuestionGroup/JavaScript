@@ -1,0 +1,56 @@
+<div class="row wrapper">
+  <div class="row">
+    <div class="small-12 small-centered columns rulesandupload">
+
+
+      <div class="instructions">
+        <header id="howToPlay">How to play</header>
+
+      <div class="accordion thissection">
+        <header id="howToPlay">Two Ways to Play:</header>
+
+
+        <p class="instructions" id="para3">1) Post visionQuestions and their answers for other players to guess!</p>
+        <p class="instructions">This can be done using the visionQuestion mobile app, or by simply entering an image URL in the form below.</p>
+      </div> {{!-- End howToPlay --}}
+
+      <div class="addpost">
+        <header id="addPost">Add Post</header>
+
+        <form id="addPost">
+          <input type="text" placeholder="Photo URL" id="photoURL">
+          <input type="text" placeholder="Answer" id="answer">
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="mdi-content-send right"></i></button>
+        </form> {{!-- End addPhoto --}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sorting">
+  <label>Sort by:
+    <a href="#"><input type="radio" name="sortByOption" class="sortby" value="all">All</input></a>
+    <a href="#playable"><input type="radio" name="sortByOption" class="sortby" value="playable" checked="checked">Playable</input></a>
+    <a href="#unplayable"><input type="radio" name="sortByOption" class="sortby" value="unplayable">Unplayable</input></a>
+    <a href="#allmyposts"><input type="radio" name="sortByOption" class="sortby" value="myPostsAll">My Posts - All</input></a>
+    <a href="#mypostssolved"><input type="radio" name="sortByOption" class="sortby" value="myPostsSolved">My Posts - Solved</input></a>
+    <a href="#mypostsnotsolved"><input type="radio" name="sortByOption" class="sortby" value="myPostsNot">My Posts - Not Solved</input></a>
+  </label>
+</div>
+
+<div class="columns">
+
+  <ul class="small-block-grid-3 posts">
+    {{#each post}}
+
+    <li class="post" data-id="{{id}}">
+      <div class="postview">
+        <a href="#visionQuestion/{{id}}"><img src="{{post_info.image_url}}"></a>
+        <p>Taken by: {{creator.user_name}}</p>
+      </div>
+    </li>
+
+    {{/each}}
+  </ul>
+</div>
