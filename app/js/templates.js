@@ -2,23 +2,49 @@ this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression, alias4=this.lambda;
 
-  return "\n      <li class=\"post\" data-id=\""
+  return "\n    <li class=\"post\" data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n        <div class=\"postview\">\n          <a href=\"#visionQuestion/"
+    + "\">\n      <div class=\"postview\">\n        <a href=\"#visionQuestion/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(alias4(((stack1 = (depth0 != null ? depth0.post_info : depth0)) != null ? stack1.image_url : stack1), depth0))
-    + "\"></a>\n          <a href=\"#visionQuestion/"
+    + "\"></a>\n        <a href=\"#visionQuestion/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\"><div class=\"opacity\"></div></a>\n          <p>Taken by: "
+    + "\"><div class=\"opacity\"></div></a>\n        <p>Taken by: "
     + alias3(alias4(((stack1 = (depth0 != null ? depth0.creator : depth0)) != null ? stack1.user_name : stack1), depth0))
-    + "</p>\n        </div>\n      </li>\n\n";
+    + "</p>\n      </div>\n    </li>\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
+<<<<<<< HEAD
   return "<div class=\"row wrapper\">\n  <div class=\"row\">\n    <div class=\"small-12 small-centered columns rulesandupload\">\n\n\n      <div class=\"instructions\">\n        <header id=\"howToPlay\">How to play</header>\n\n      <div class=\"accordion thissection\">\n        <header id=\"howToPlay\">Two Ways to Play:</header>\n\n\n        <p class=\"instructions\" id=\"para3\">1) Post visionQuestions and their answers for other players to guess!</p>\n        <p class=\"instructions\">This can be done using the visionQuestion mobile app, or by simply entering an image URL in the form below.</p>\n      </div> \n\n      <div class=\"addpost\">\n        <header id=\"addPost\">Add Post</header>\n\n        <form id=\"addPost\">\n          <input type=\"text\" placeholder=\"Photo URL\" id=\"photoURL\">\n          <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n          <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n          <i class=\"mdi-content-send right\"></i></button>\n        </form> \n      </div> \n    </div>\n  </div>\n</div>\n\n<div class=\"sorting\">\n  <label>Sort by:\n    <a href=\"#\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"playable\" checked=\"checked\">Playable</input></a>\n    <a href=\"#unplayable\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"unplayable\">Unplayable</input></a>\n    <a href=\"#allmyposts\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsAll\">My Posts - All</input></a>\n    <a href=\"#mypostssolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsSolved\">My Posts - Solved</input></a>\n    <a href=\"#mypostsnotsolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsNot\">My Posts - Not Solved</input></a>\n  </label>\n</div>\n\n  <div class=\"columns\">\n\n    <ul class=\"small-block-grid-3 posts\">\n"
+=======
+  return "<div class=\"row wrapper\">\n  <div class=\"row\">\n    <div class=\"small-12 small-centered columns rulesandupload\">\n\n      <div class=\"instructions\">\n        <header id=\"howToPlay\">How to play</header>\n\n        <p id=\"para3\">How to play instruction.</p>\n      </div> \n\n      <div class=\"addpost\">\n        <header id=\"addPost\">Add Post</header>\n\n        <form id=\"addPost\">\n          <input type=\"text\" placeholder=\"Photo URL\" id=\"photoURL\">\n          <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n          <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n          <i class=\"mdi-content-send right\"></i></button>\n        </form> \n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"sorting\">\n  <label>Sort by:\n    <a href=\"#\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"playable\" checked=\"checked\">Playable</input></a>\n    <a href=\"#unplayable\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"unplayable\">Unplayable</input></a>\n    <a href=\"#allmyposts\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsAll\">My Posts - All</input></a>\n    <a href=\"#mypostssolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsSolved\">My Posts - Solved</input></a>\n    <a href=\"#mypostsnotsolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsNot\">My Posts - Not Solved</input></a>\n  </label>\n</div>\n\n<div class=\"columns\">\n\n  <ul class=\"small-block-grid-3 posts\">\n"
+>>>>>>> e277abdd46d85ea20072cae7ae24ee2b8e197eb7
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.post : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </ul>\n  </div>\n";
+    + "  </ul>\n</div>\n";
+},"useData":true});
+this["hbs"] = this["hbs"] || {};
+this["hbs"]["mypostsall"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression, alias4=this.lambda;
+
+  return "\n    <li class=\"post\" data-id=\""
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\">\n      <div class=\"postview\">\n        <a href=\"#visionQuestion/"
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\"><img src=\""
+    + alias3(alias4(((stack1 = (depth0 != null ? depth0.post_info : depth0)) != null ? stack1.image_url : stack1), depth0))
+    + "\"></a>\n        <a href=\"#visionQuestion/"
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\"><div class=\"opacity\"></div></a>\n        <p>Taken by: "
+    + alias3(alias4(((stack1 = (depth0 != null ? depth0.creator : depth0)) != null ? stack1.user_name : stack1), depth0))
+    + "</p>\n      </div>\n    </li>\n\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"row wrapper\">\n  <div class=\"row\">\n    <div class=\"small-12 small-centered columns rulesandupload\">\n\n      <div class=\"instructions\">\n        <header id=\"howToPlay\">How to play</header>\n\n        <p id=\"para3\">How to play instruction.</p>\n      </div> \n\n      <div class=\"addpost\">\n        <header id=\"addPost\">Add Post</header>\n\n        <form id=\"addPost\">\n          <input type=\"text\" placeholder=\"Photo URL\" id=\"photoURL\">\n          <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n          <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n          <i class=\"mdi-content-send right\"></i></button>\n        </form> \n      </div> \n    </div>\n  </div>\n</div>\n\n<div class=\"sorting\">\n  <label>Sort by:\n    <a href=\"#\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"playable\">Playable</input></a>\n    <a href=\"#unplayable\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"unplayable\">Unplayable</input></a>\n    <a href=\"#allmyposts\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsAll\" checked=\"checked\">My Posts - All</input></a>\n    <a href=\"#mypostssolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsSolved\">My Posts - Solved</input></a>\n    <a href=\"#mypostsnotsolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsNot\">My Posts - Not Solved</input></a>\n  </label>\n</div>\n\n<div class=\"columns\">\n\n  <ul class=\"small-block-grid-3 posts\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.post : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "  </ul>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["nav"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -36,23 +62,23 @@ this["hbs"] = this["hbs"] || {};
 this["hbs"]["postsunplayable"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression, alias4=this.lambda;
 
-  return "\n      <li class=\"post\" data-id=\""
+  return "\n    <li class=\"post\" data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n        <div class=\"postview\">\n          <a href=\"#visionQuestion/"
+    + "\">\n      <div class=\"postview\">\n        <a href=\"#visionQuestion/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(alias4(((stack1 = (depth0 != null ? depth0.post_info : depth0)) != null ? stack1.image_url : stack1), depth0))
-    + "\"></a>\n          <a href=\"#visionQuestion/"
+    + "\"></a>\n        <a href=\"#visionQuestion/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\"><div class=\"opacity\"></div></a>\n          <p>Taken by: "
+    + "\"><div class=\"opacity\"></div></a>\n        <p>Taken by: "
     + alias3(alias4(((stack1 = (depth0 != null ? depth0.creator : depth0)) != null ? stack1.user_name : stack1), depth0))
-    + "</p>\n        </div>\n      </li>\n\n";
+    + "</p>\n      </div>\n    </li>\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"row wrapper\">\n  <div class=\"row\">\n    <div class=\"small-12 small-centered columns rulesandupload\">\n\n      <div class=\"instructions\">\n        <header id=\"howToPlay\">How to play</header>\n\n        <p id=\"para3\">How to play instruction.</p>\n      </div> \n\n      <div class=\"addpost\">\n        <header id=\"addPost\">Add Post</header>\n\n        <form id=\"addPost\">\n          <input type=\"text\" placeholder=\"Photo URL\" id=\"photoURL\">\n          <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n          <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n          <i class=\"mdi-content-send right\"></i></button>\n        </form> \n      </div> \n    </div>\n  </div>\n</div>\n\n<div class=\"sorting\">\n  <label>Sort by:\n    <a href=\"#\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"playable\">Playable</input></a>\n    <a href=\"#unplayable\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"unplayable\" checked=\"checked\">Unplayable</input></a>\n    <a href=\"#allmyposts\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsAll\">My Posts - All</input></a>\n    <a href=\"#mypostssolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsSolved\">My Posts - Solved</input></a>\n    <a href=\"#mypostsnotsolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsNot\">My Posts - Not Solved</input></a>\n  </label>\n</div>\n\n  <div class=\"columns\">\n\n    <ul class=\"small-block-grid-3 posts\">\n"
+  return "<div class=\"row wrapper\">\n  <div class=\"row\">\n    <div class=\"small-12 small-centered columns rulesandupload\">\n\n      <div class=\"instructions\">\n        <header id=\"howToPlay\">How to play</header>\n\n        <p id=\"para3\">How to play instruction.</p>\n      </div> \n\n      <div class=\"addpost\">\n        <header id=\"addPost\">Add Post</header>\n\n        <form id=\"addPost\">\n          <input type=\"text\" placeholder=\"Photo URL\" id=\"photoURL\">\n          <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n          <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n          <i class=\"mdi-content-send right\"></i></button>\n        </form> \n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"sorting\">\n  <label>Sort by:\n    <a href=\"#\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"playable\">Playable</input></a>\n    <a href=\"#unplayable\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"unplayable\" checked=\"checked\">Unplayable</input></a>\n    <a href=\"#allmyposts\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsAll\">My Posts - All</input></a>\n    <a href=\"#mypostssolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsSolved\">My Posts - Solved</input></a>\n    <a href=\"#mypostsnotsolved\"><input type=\"radio\" name=\"sortByOption\" class=\"sortby\" value=\"myPostsNot\">My Posts - Not Solved</input></a>\n  </label>\n</div>\n\n<div class=\"columns\">\n\n  <ul class=\"small-block-grid-3 posts\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.post : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </ul>\n  </div>\n";
+    + "  </ul>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -66,9 +92,9 @@ this["hbs"]["scoreboard"] = Handlebars.template({"1":function(depth0,helpers,par
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"score\">\n  <h2>visionQuestion Scoreboard</h2>\n\n  <div class=\"scoretitle\">\n    <h4>Top Ten Leaders</h4>\n  </div>\n\n  <form>\n    <ul>\n"
+  return "<div class=\"scored\">\n  <h2>visionQuestion Scoreboard</h2>\n\n  <div class=\"scoretitle\">\n    <h4>Top Ten Leaders</h4>\n  </div>\n\n  <form>\n    <ul>\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.users : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    </ul>\n  </form>\n\n  <h4>Thank you for playing visionQuestion</h4>\n\n</div>\n\n";
+    + "    </ul>\n  </form>\n  <div class=\"thkyou\">\n  <h4>Thank you for playing visionQuestion</h4>\n  </div>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
