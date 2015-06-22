@@ -2,29 +2,28 @@
 
   'use strict';
 
-  var postsAll = new app.Collections.PostsAll();
+  app.Views.PostsPlayable = Backbone.View.extend({
 
-  postsAll.fetch();
-
-  app.Views.Main = Backbone.View.extend({
-
-    className: 'main',
+    className: 'postsplayable',
 
     events: {
       'submit #addPost'   : 'addPost'
     },
 
-    template: hbs.main,
+    template: hbs.postsplayable,
 
     initialize: function(options) {
-      this.collection = postsAll;
+
+      var args = options || {};
+
+      this.postsplayableCollection = args.postsplayableCollection;
 
       this.render();
       $('.container').html(this.el);
     },
 
     render: function(sortBy) {
-      this.$el.html(this.template({post: this.collection.toJSON()}));
+      this.$el.html(this.template({post: this.postsplayableCollection.toJSON()}));
     },
 
     addPost: function(event) {

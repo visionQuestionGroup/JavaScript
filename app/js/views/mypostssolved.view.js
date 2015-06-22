@@ -4,7 +4,7 @@
 
   var myPostsSolved = new app.Collections.MyPostsSolved();
 
-  MyPostsSolved.fetch();
+  myPostsSolved.fetch();
 
   app.Views.MyPostsSolved = Backbone.View.extend({
 
@@ -18,7 +18,7 @@
 
     initialize: function() {
 
-      this.collection = MyPostsSolved;
+      this.collection = myPostsSolved;
 
       this.render();
       $('.container').html(this.el);
