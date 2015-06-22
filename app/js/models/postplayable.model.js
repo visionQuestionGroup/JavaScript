@@ -2,7 +2,7 @@
 
     'use strict';
 
-    app.Models.Post = Backbone.Model.extend({
+    app.Models.PostPlayable = Backbone.Model.extend({
 
     defaults:  {
       id: '',

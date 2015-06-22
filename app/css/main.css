@@ -6839,6 +6839,9 @@ nav form {
   text-align: center;
   margin: 0 auto; }
 
+.sortby {
+  display: inline-block; }
+
 .signupForm {
   text-align: center;
   margin: 50px auto; }

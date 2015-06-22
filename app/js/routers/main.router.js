@@ -9,7 +9,7 @@
       var args = options || {};
 
       this.usersCollection = args.usersCollection;
-      this.postsCollection = args.postsCollection;
+      this.postsplayableCollection = args.postsplayableCollection;
       this.guessesCollection = args.guessesCollection;
       this.scoreboardCollection = args.scoreboardCollection;
 
@@ -19,7 +19,6 @@
       '': 'homePage',
       'visionQuestion/:id': 'viewQuestion',
       'scoreboard': 'scoreboard',
-      'newQuest': 'newQuest',
       'signup': 'signUp',
       // 'edit/:id' : 'editQuest',
       '*path': 'errorPage'
@@ -27,7 +26,7 @@
 
     homePage: function() {
       new app.Views.Main({
-        postsCollection: this.postsCollection,
+        postsplayableCollection: this.postsplayableCollection,
         usersCollection: this.usersCollection
       });
       new app.Views.NavView({});
@@ -42,15 +41,13 @@
       console.log('entering viewQuestion function');
       new app.Views.ViewQuestion({
         postId: id,
-        postsCollection: this.postsCollection
+        postsplayableCollection: this.postsplayableCollection
       });
       new app.Views.NavView({});
     },
 
     scoreboard: function(username) {
       new app.Views.Scoreboard({
-
-
         scoreboardCollection: this.scoreboardCollection
       });
       new app.Views.NavView({});

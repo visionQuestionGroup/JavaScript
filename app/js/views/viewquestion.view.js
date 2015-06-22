@@ -15,14 +15,14 @@
     initialize: function(options) {
       var args = options || {};
       this.postId = args.postId;
-      this.postsCollection = args.postsCollection;
+      this.postsplayableCollection = args.postsplayableCollection;
 
       this.render();
       $('.container').html(this.el);
     },
 
     render: function() {
-      var singlePost = this.postsCollection.get(this.postId);
+      var singlePost = this.postsplayableCollection.get(this.postId);
       this.$el.html(this.template(singlePost.toJSON()));
     }
   });

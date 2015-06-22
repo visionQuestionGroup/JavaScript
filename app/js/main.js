@@ -8,15 +8,15 @@
 
 
   var allUsers = new app.Collections.Users();
-  var allPosts = new app.Collections.Posts();
+  var allPostsPlayable = new app.Collections.PostsPlayable();
   var allGuesses = new app.Collections.Guesses();
   var scoreboard = new app.Collections.Scoreboard();
 
-  allPosts.fetch().done(function() {
+  allPostsPlayable.fetch().done(function() {
 
     app.mainRouter = new app.Routers.MainRouter({
       usersCollection: allUsers,
-      postsCollection: allPosts,
+      postsplayableCollection: allPostsPlayable,
       guessesCollection: allGuesses
     });
 
