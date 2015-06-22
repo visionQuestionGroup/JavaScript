@@ -73,7 +73,6 @@
     },
 
     viewQuestion: function(id) {
-      console.log('entering viewQuestion function');
       new app.Views.ViewQuestion({
         postId: id,
         postsplayableCollection: this.postsplayableCollection
