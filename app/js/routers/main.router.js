@@ -11,14 +11,20 @@
       this.usersCollection = args.usersCollection;
       this.postsplayableCollection = args.postsplayableCollection;
       this.postsunplayableCollection = args.postsunplayableCollection;
+      this.mypostsallCollection = args.mypostsallCollection;
+      this.mypostssolvedCollection = args.mypostssolvedCollection;
+      this.mypostsnotsolvedCollection = args.mypostsnotsolvedCollection;
       this.guessesCollection = args.guessesCollection;
       this.scoreboardCollection = args.scoreboardCollection;
 
     },
 
     routes: {
-      '': 'homePage',
+      '': 'homePage', //playable posts
       'unplayable': 'unplayable',
+      'mypostsall': 'mypostsall',
+      'mypostssolved': 'mypostssolved',
+      'mypostsnotsolved': 'mypostsnotsolved',
       'visionQuestion/:id': 'viewQuestion',
       'scoreboard': 'scoreboard',
       'signup': 'signUp',
@@ -40,13 +46,33 @@
       new app.Views.NavView({});
     },
 
+    mypostsall: function() {
+      new app.Views.MyPostsAll({
+        mypostsallCollection: this.mypostsallCollection,
+      });
+      new app.Views.NavView({});
+    },
+
+    mypostssolved: function() {
+      new app.Views.MyPostsSolved({
+        mypostssolvedCollection: this.mypostssolvedCollection,
+      });
+      new app.Views.NavView({});
+    },
+
+    mypostsnotsolved: function() {
+      new app.Views.MyPostsNotSolved({
+        mypostsnotsolvedCollection: this.mypostsnotsolvedCollection,
+      });
+      new app.Views.NavView({});
+    },
+
     signUp: function() {
       new app.Views.SignUpView({});
       new app.Views.NavView({});
     },
 
     viewQuestion: function(id) {
-      console.log('entering viewQuestion function');
       new app.Views.ViewQuestion({
         postId: id,
         postsplayableCollection: this.postsplayableCollection
