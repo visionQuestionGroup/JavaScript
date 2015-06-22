@@ -16,7 +16,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"row wrapper\">\n  <div class=\"row\">\n    <div class=\"small-12 small-centered columns rulesandupload\">\n\n      <div class=\"accordion thissection\">\n        <header id=\"howToPlay\">How to play</header>\n\n        <p id=\"para3\">How to play instruction.</p>\n      </div> \n\n      <div class=\"accordion\">\n        <header id=\"addPost\">Add Post</header>\n\n        <form id=\"addPost\">\n          <input type=\"text\" placeholder=\"Photo URL\" id=\"photoURL\">\n          <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n          <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n          <i class=\"mdi-content-send right\"></i></button>\n        </form> \n      </div> \n    </div>\n  </div>\n</div>\n\n<div class=\"dropdown\">\n  <label>Sort by:\n    <select id=\"sortBy\">\n      <option value=\"available\">Available</option>\n      <option value=\"completedFail\">Completed - Successful</option>\n      <option value=\"completedSuccess\">Completed - Unsuccessful</option>\n      <option value=\"myPosts\">My Posts</option>\n    </select> <!-- end contactCat -->\n  </label>\n</div>\n\n  <div class=\"columns\">\n\n    <ul class=\"small-block-grid-3 posts\">\n"
+  return "<div class=\"row wrapper\">\n  <div class=\"row\">\n    <div class=\"small-12 small-centered columns rulesandupload\">\n\n      <div class=\"accordion thissection\">\n        <header id=\"howToPlay\">Two Ways to Play:</header>\n\n        <p class=\"instructions\" id=\"para3\">1) Post visionQuestions and their answers for other players to guess!</p>\n        <p class=\"instructions\">This can be done using the visionQuestion mobile app, or by simply entering an image URL in the form below.</p>\n      </div> \n\n      <div class=\"accordion\">\n        <header id=\"addPost\">Add Post</header>\n\n        <form id=\"addPost\">\n          <input type=\"text\" placeholder=\"Photo URL\" id=\"photoURL\">\n          <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n          <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n          <i class=\"mdi-content-send right\"></i></button>\n        </form> \n      </div> \n    </div>\n  </div>\n</div>\n\n<div class=\"dropdown\">\n  <label>Sort by:\n    <select id=\"sortBy\">\n      <option value=\"available\">Available</option>\n      <option value=\"completedFail\">Completed - Successful</option>\n      <option value=\"completedSuccess\">Completed - Unsuccessful</option>\n      <option value=\"myPosts\">My Posts</option>\n    </select> <!-- end contactCat -->\n  </label>\n</div>\n\n  <div class=\"columns\">\n\n    <ul class=\"small-block-grid-3 posts\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.post : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "    </ul>\n  </div>\n";
 },"useData":true});
@@ -53,14 +53,20 @@ this["hbs"]["signup"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
     return "<form id=\"signup\">\n\n  <div class=\"signupForm large-4 large-centered columns\">\n\n    <h2>Sign Up</h2>\n\n    <input type=\"text\" class=\"input\" placeholder=\"First Name\" id=\"firstName\">\n\n    <input type=\"text\" class=\"input\" placeholder=\"Last Name\" id=\"lastName\">\n\n    <input type=\"text\" class=\"input\" placeholder=\"Username\" id=\"userName\">\n\n    <input type=\"text\" class=\"input\" placeholder=\"Email\" id=\"email\">\n\n    <input type=\"password\" class=\"input\" placeholder=\"Password\" id=\"password\">\n\n    <input type=\"password\" class=\"input\" placeholder=\"Confirm Password\" id=\"confirmPassword\">\n\n    <button>Sign Up!</button>\n\n  </div>\n\n</form>\n\n<div id=\"successMsg\"></div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["viewquestion"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=this.lambda, alias2=this.escapeExpression;
+this["hbs"]["viewquestion"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "\n  <div>\n    <span>"
+    + this.escapeExpression(((helper = (helper = helpers.response || (depth0 != null ? depth0.response : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"response","hash":{},"data":data}) : helper)))
+    + "</span>\n  </div>\n\n\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
   return "<div class=\"singleview\">\n\n  <img src=\""
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.post_info : depth0)) != null ? stack1.image_url : stack1), depth0))
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.post : depth0)) != null ? stack1.post_info : stack1)) != null ? stack1.image_url : stack1), depth0))
     + "\">\n <p>Taken by: "
-    + alias2(alias1(((stack1 = (depth0 != null ? depth0.creator : depth0)) != null ? stack1.user_name : stack1), depth0))
-    + "</p>\n\n  <input type=\"text\" id=\"guess\" placeholder=\"What's your guess?\">\n  <button type=\"submit\" name=\"action\">Submit</button>\n  <button id=\"hint\" data-id=\""
-    + alias2(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">Hint</button>\n\n</div>\n";
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.post : depth0)) != null ? stack1.creator : stack1)) != null ? stack1.user_name : stack1), depth0))
+    + "</p>\n\n  <form>\n    <input type=\"text\" id=\"guessText\" placeholder=\"What's your guess?\">\n    <button type=\"submit\" id=\"guessBtn\" name=\"action\">Submit</button>\n  </form>\n\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.guessResponse : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n</div>\n";
 },"useData":true});

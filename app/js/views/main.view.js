@@ -35,18 +35,12 @@
 
       // Create post instance
 
-      // var postInstance = new app.Models.Post({
-      //   image_url: image_url,
-      //   answer: answer,
-      // });
-
       var postInstance = {
         image_url: image_url,
         answer: answer,
       }
 
       console.log(postInstance);
-      console.log(this)
 
       // Add instance to collection and save to database
       // this.postsCollection.add(postInstance).save({url: app.RootUrl + 'posts/new'}).success(function() {
@@ -59,8 +53,8 @@
           dataType: "json",
           data: postInstance,
           success: function() {
-            // that.render();
-            // $('#addPost')[0].reset();
+            that.render();
+            $('#addPost')[0].reset();
             document.location.reload();
                 }
             });

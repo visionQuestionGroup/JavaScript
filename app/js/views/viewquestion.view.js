@@ -9,21 +9,55 @@
     template: hbs.viewquestion,
 
     events: {
-      // 'click #delete': 'deletePhoto'
+      'click #guessBtn': 'guess'
     },
 
     initialize: function(options) {
+
       var args = options || {};
       this.postId = args.postId;
       this.postsCollection = args.postsCollection;
-
       this.render();
       $('.container').html(this.el);
     },
 
     render: function() {
+      console.log('rendering');
       var singlePost = this.postsCollection.get(this.postId);
-      this.$el.html(this.template(singlePost.toJSON()));
+      var params = {
+        post: this.postsCollection.get(this.postId).toJSON(),
+        guessResponse: this.guessResponse,
+        response: this.response
+      };
+      this.$el.html(this.template(params));
+
+    },
+
+    guess: function(event) {
+
+      event.preventDefault();
+
+      var imageObject = this.postsCollection.get(this.postId);
+
+      var answer = imageObject.attributes.post_info.answer;
+
+      var userAnswer = $('#guessText').val();
+
+      console.log(answer);
+
+      console.log(userAnswer);
+
+      if (answer.toLowerCase() == userAnswer.toLowerCase()) {
+        this.guessResponse = true;
+        console.log('correct!');
+        this.response = "You got it! Great job!";
+        this.render();
+      } else {
+        this.guessResponse = true;
+        this.response = "Sorry. Try again!";
+        this.render();
+      };
+
     }
   });
 
