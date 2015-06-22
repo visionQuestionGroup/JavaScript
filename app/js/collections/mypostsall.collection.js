@@ -6,7 +6,7 @@
 
       model: app.Models.MyPostAll,
 
-      url: app.rootURL + 'post/user'
+      url: app.rootURL + 'posts/user'
 
   });
 

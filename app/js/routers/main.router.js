@@ -22,7 +22,7 @@
     routes: {
       '': 'homePage', //playable posts
       'unplayable': 'unplayable',
-      'mypostsall': 'mypostsall',
+      'allmyposts': 'mypostsall',
       'mypostssolved': 'mypostssolved',
       'mypostsnotsolved': 'mypostsnotsolved',
       'visionQuestion/:id': 'viewQuestion',
