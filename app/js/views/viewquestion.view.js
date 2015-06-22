@@ -16,9 +16,7 @@
 
       var args = options || {};
       this.postId = args.postId;
-
       this.postsplayableCollection = args.postsplayableCollection;
-
       this.render();
       $('.container').html(this.el);
     },
@@ -40,7 +38,7 @@
 
       event.preventDefault();
 
-      var imageObject = this.postsCollection.get(this.postId);
+      var imageObject = this.postsplayableCollection.get(this.postId);
 
       var answer = imageObject.attributes.post_info.answer;
 
