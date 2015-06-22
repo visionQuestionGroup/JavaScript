@@ -10,6 +10,7 @@
 
       this.usersCollection = args.usersCollection;
       this.postsplayableCollection = args.postsplayableCollection;
+      this.postsunplayableCollection = args.postsunplayableCollection;
       this.guessesCollection = args.guessesCollection;
       this.scoreboardCollection = args.scoreboardCollection;
 
@@ -17,10 +18,10 @@
 
     routes: {
       '': 'homePage',
+      'unplayable': 'unplayable',
       'visionQuestion/:id': 'viewQuestion',
       'scoreboard': 'scoreboard',
       'signup': 'signUp',
-      // 'edit/:id' : 'editQuest',
       '*path': 'errorPage'
     },
 
@@ -28,6 +29,13 @@
       new app.Views.Main({
         postsplayableCollection: this.postsplayableCollection,
         usersCollection: this.usersCollection
+      });
+      new app.Views.NavView({});
+    },
+
+    unplayable: function() {
+      new app.Views.PostsUnplayable({
+        postsunplayableCollection: this.postsunplayableCollection,
       });
       new app.Views.NavView({});
     },

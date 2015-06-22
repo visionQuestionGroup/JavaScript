@@ -9,6 +9,7 @@
 
   var allUsers = new app.Collections.Users();
   var allPostsPlayable = new app.Collections.PostsPlayable();
+  var allPostsUnplayable = new app.Collections.PostsUnplayable();
   var allGuesses = new app.Collections.Guesses();
   var scoreboard = new app.Collections.Scoreboard();
 
@@ -17,6 +18,7 @@
     app.mainRouter = new app.Routers.MainRouter({
       usersCollection: allUsers,
       postsplayableCollection: allPostsPlayable,
+      postsunplayableCollection: allPostsUnplayable,
       guessesCollection: allGuesses
     });
 
