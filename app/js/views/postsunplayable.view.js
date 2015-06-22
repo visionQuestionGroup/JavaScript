@@ -2,6 +2,10 @@
 
   'use strict';
 
+  var allPostsUnplayable = new app.Collections.PostsUnplayable();
+
+  allPostsUnplayable.fetch();
+
   app.Views.PostsUnplayable = Backbone.View.extend({
 
     className: 'postsunplayable',
@@ -12,16 +16,16 @@
 
     template: hbs.postsunplayable,
 
-    initialize: function(options) {
-      var args = options || {};
-      this.postsunplayableCollection = args.postsunplayableCollection;
+    initialize: function() {
+
+      this.collection = allPostsUnplayable;
 
       this.render();
       $('.container').html(this.el);
     },
 
     render: function(sortBy) {
-      this.$el.html(this.template({post: this.postsunplayableCollection.toJSON()}));
+      this.$el.html(this.template({post: this.collection.toJSON()}));
     },
 
     addPost: function(event) {
