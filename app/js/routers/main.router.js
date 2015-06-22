@@ -10,12 +10,7 @@
 
       this.usersCollection = args.usersCollection;
       this.postsplayableCollection = args.postsplayableCollection;
-      // this.postsunplayableCollection = args.postsunplayableCollection;
-      // this.mypostsallCollection = args.mypostsallCollection;
-      // this.mypostssolvedCollection = args.mypostssolvedCollection;
-      // this.mypostsnotsolvedCollection = args.mypostsnotsolvedCollection;
       this.guessesCollection = args.guessesCollection;
-      // this.scoreboardCollection = args.scoreboardCollection;
 
     },
 

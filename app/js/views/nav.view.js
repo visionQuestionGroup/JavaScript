@@ -13,7 +13,6 @@
             'click #signOutBtn' : 'signOut'
         },
 
-
         initialize: function(options) {
 
             var args = options || {};
@@ -23,7 +22,7 @@
             $('#nav').html(this.el);
 
             $.ajax({
-              url: 'https://vast-wildwood-6662.herokuapp.com/posts/user',
+              url: app.rootURL + 'posts/user',
               type: 'GET',
               dataType: "json",
               success: function(data) {
@@ -33,7 +32,7 @@
               });
 
             $.ajax({
-              url: 'https://vast-wildwood-6662.herokuapp.com/user/score',
+              url: app.rootURL + 'user/score',
               type: 'GET',
               dataType: "json",
               success: function(data) {
@@ -59,7 +58,7 @@
             event.preventDefault();
 
 
-            var url = 'https://vast-wildwood-6662.herokuapp.com/users/login/';
+            var url = app.rootURL + 'users/login/';
 
             var form = $(event.target),
                 userName = $('#user').val(),
@@ -87,7 +86,6 @@
             });
 
         },
-
 
         signOut: function(event) {
 

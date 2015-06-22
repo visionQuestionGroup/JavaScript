@@ -41,7 +41,6 @@
         answer: answer,
       }
 
-
       // Add instance to collection and save to database
       $.ajax({
           url: app.rootURL +'posts/new',

@@ -61,7 +61,7 @@
           this.response = "You got it! Great job!";
 
           $.ajax({
-            url: 'https://vast-wildwood-6662.herokuapp.com/guesses',
+            url: app.rootURL + 'guesses',
             type: 'POST',
             dataType: "json",
             data: correctGuess,
