@@ -6718,7 +6718,8 @@ body {
 
 #nav {
   height: 70px;
-  background-color: black; }
+  background-color: black;
+  margin-bottom: 30px; }
 
 .logo {
   display: inline-block;
@@ -6825,6 +6826,16 @@ nav form {
 
 .container img {
   margin: 5px; }
+
+#howToPlay {
+  font-size: 40px;
+  color: #148DB8;
+  text-align: left; }
+
+.instructions {
+  font-size: 16px;
+  color: #148DB8;
+  text-align: left; }
 
 .post {
   list-style-type: none;

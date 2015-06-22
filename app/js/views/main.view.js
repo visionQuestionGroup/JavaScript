@@ -33,10 +33,12 @@
           answer = form.find('#answer').val();
 
       // Create post instance
+
       var postInstance = {
         image_url: image_url,
         answer: answer,
       }
+
 
       // Add instance to collection and save to database
       $.ajax({
@@ -45,6 +47,10 @@
           dataType: "json",
           data: postInstance,
           success: function() {
+
+            that.render();
+            $('#addPost')[0].reset();
+
             document.location.reload();
           }
       });

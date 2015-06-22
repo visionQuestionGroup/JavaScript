@@ -28,6 +28,7 @@ body {
 #nav {
   height: 70px;
   background-color: black;
+  margin-bottom: 30px;
 }
 
 .logo {
@@ -156,6 +157,18 @@ nav form {
   img {
     margin: 5px;
   }
+}
+
+#howToPlay {
+  font-size: 40px;
+  color: #148DB8;
+  text-align: left;
+}
+
+.instructions {
+  font-size: 16px;
+  color: #148DB8;
+  text-align: left;
 }
 
 .post {
