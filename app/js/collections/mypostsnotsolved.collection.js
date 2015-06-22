@@ -6,7 +6,7 @@
 
       model: app.Models.MyPostNotSolved,
 
-      url: app.rootURL + 'post/user/notsolved'
+      url: app.rootURL + 'posts/user/notsolved'
 
   });
 

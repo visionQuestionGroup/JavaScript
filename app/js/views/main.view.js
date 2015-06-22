@@ -2,6 +2,10 @@
 
   'use strict';
 
+  var postsAll = new app.Collections.PostsAll();
+
+  postsAll.fetch();
+
   app.Views.Main = Backbone.View.extend({
 
     className: 'main',
@@ -13,15 +17,14 @@
     template: hbs.main,
 
     initialize: function(options) {
-      var args = options || {};
-      this.postsplayableCollection = args.postsplayableCollection;
+      this.collection = postsAll;
 
       this.render();
       $('.container').html(this.el);
     },
 
     render: function(sortBy) {
-      this.$el.html(this.template({post: this.postsplayableCollection.toJSON()}));
+      this.$el.html(this.template({post: this.collection.toJSON()}));
     },
 
     addPost: function(event) {

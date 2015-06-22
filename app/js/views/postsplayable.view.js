@@ -2,7 +2,7 @@
 
   'use strict';
 
-  app.Views.Main = Backbone.View.extend({
+  app.Views.PostsPlayable = Backbone.View.extend({
 
     className: 'postsplayable',
 
@@ -16,15 +16,14 @@
 
       var args = options || {};
 
-      this.collection = args.postsunplayableCollection;
-      this.collection.fetch();
+      this.postsplayableCollection = args.postsplayableCollection;
 
       this.render();
       $('.container').html(this.el);
     },
 
     render: function(sortBy) {
-      this.$el.html(this.template({post: this.collection.toJSON()}));
+      this.$el.html(this.template({post: this.postsplayableCollection.toJSON()}));
     },
 
     addPost: function(event) {
