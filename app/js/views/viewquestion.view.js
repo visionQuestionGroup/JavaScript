@@ -18,20 +18,13 @@
       this.postId = args.postId;
       this.postsplayableCollection = args.postsplayableCollection;
       this.render();
-      this.guessesLeft = 3;
       $('.container').html(this.el);
     },
 
     render: function() {
 
       var singlePost = this.postsplayableCollection.get(this.postId);
-      var params = {
-        post: this.postsplayableCollection.get(this.postId).toJSON(),
-        guessResponse: this.guessResponse,
-        response: this.response,
-        guessesLeft: this.guessesLeft
-      };
-      this.$el.html(this.template(params));
+      this.$el.html(this.template(singlePost));
 
     },
 
@@ -45,38 +38,38 @@
 
       var userAnswer = $('#guessText').val();
 
-      console.log(answer);
+      console.log(this.postId);
 
-      console.log(userAnswer);
+      guesses.set('this.postId', 'userAnswer');
 
-        if (answer.toLowerCase() == userAnswer.toLowerCase()) {
-          this.guessResponse = true;
-          var points = 300;
-          var won = true;
-          var correctGuess = {
-            "points": points,
-            "won" : won
-          }
-          console.log('correct!');
-          this.response = "You got it! Great job!";
+        // if (answer.toLowerCase() == userAnswer.toLowerCase()) {
+        //   this.guessResponse = true;
+        //   var points = 300;
+        //   var won = true;
+        //   var correctGuess = {
+        //     "points": points,
+        //     "won" : won
+        //   }
+        //   console.log('correct!');
+        //   this.response = "You got it! Great job!";
 
-          $.ajax({
-            url: app.rootURL + 'guesses',
-            type: 'POST',
-            dataType: "json",
-            data: correctGuess,
-            success: function(data) {
-              console.log(correctGuess);
-            }
-          });
+        //   $.ajax({
+        //     url: app.rootURL + 'guesses',
+        //     type: 'POST',
+        //     dataType: "json",
+        //     data: correctGuess,
+        //     success: function(data) {
+        //       console.log(correctGuess);
+        //     }
+        //   });
 
-          this.render();
-        } else {
-          this.guessResponse = true;
-          this.guessesLeft --;
-          this.response = "Sorry. Try again!";
-          this.render();
-        };
+        //   this.render();
+        // } else {
+        //   this.guessResponse = true;
+        //   this.guessesLeft --;
+        //   this.response = "Sorry. Try again!";
+        //   this.render();
+        // };
 
 
     }

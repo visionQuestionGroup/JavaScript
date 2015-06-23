@@ -4,7 +4,9 @@
 
   var myPostsNotSolved = new app.Collections.MyPostsNotSolved();
 
-  myPostsNotSolved.fetch();
+  if (isLoggedIn !== 0) {
+    // myPostsNotSolved.fetch();
+  }
 
   app.Views.MyPostsNotSolved = Backbone.View.extend({
 

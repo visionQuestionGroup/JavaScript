@@ -4,13 +4,14 @@
 
   //Check for login
 
-  window.isLoggedIn = Cookies.get('access_token');
+
+  console.log(isLoggedIn);
 
   var allUsers = new app.Collections.Users();
   var allPostsPlayable = new app.Collections.PostsPlayable();
   var allGuesses = new app.Collections.Guesses();
 
-  if (isLoggedIn === true){
+  if (isLoggedIn !== 0){
     allPostsPlayable.fetch().done(function() {
 
       app.mainRouter = new app.Routers.MainRouter({

@@ -11,7 +11,7 @@
     className: 'main',
 
     events: {
-      'submit #addPost'   : 'addPost'
+      'submit #addPost' : 'addPost'
     },
 
     template: hbs.main,

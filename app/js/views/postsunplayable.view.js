@@ -4,7 +4,9 @@
 
   var allPostsUnplayable = new app.Collections.PostsUnplayable();
 
-  // allPostsUnplayable.fetch();
+  if (isLoggedIn !== 0) {
+    // allPostsUnplayable.fetch();
+  }
 
   app.Views.PostsUnplayable = Backbone.View.extend({
 

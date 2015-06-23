@@ -83,7 +83,7 @@
         },
 
         greetUser: function() {
-          if (isLoggedIn !== undefined){
+          if (isLoggedIn !== 0){
             $.ajax({
               url: app.rootURL + 'user',
               type: 'GET',
@@ -98,7 +98,7 @@
         },
 
         displayScore: function() {
-          if (isLoggedIn !== undefined){
+          if (isLoggedIn !== 0){
             $.ajax({
               url: app.rootURL + 'user/score',
               type: 'GET',

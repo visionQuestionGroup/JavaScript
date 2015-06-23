@@ -4,7 +4,9 @@
 
   var myPostsAll = new app.Collections.MyPostsAll();
 
-  myPostsAll.fetch();
+  if (isLoggedIn !== 0) {
+    // myPostsAll.fetch();
+  };
 
   app.Views.MyPostsAll = Backbone.View.extend({
 
