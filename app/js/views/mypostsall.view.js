@@ -2,9 +2,9 @@
 
   'use strict';
 
-  var myPostsAll = new app.Collections.MyPostsAll();
+  // var myPostsAll = new app.Collections.MyPostsAll();
 
-  myPostsAll.fetch();
+  // myPostsAll.fetch();
 
   app.Views.MyPostsAll = Backbone.View.extend({
 
@@ -43,15 +43,15 @@
       }
 
       // Add instance to collection and save to database
-      $.ajax({
-          url: app.rootURL +'posts/new',
-          type: 'POST',
-          dataType: "json",
-          data: postInstance,
-          success: function() {
-            document.location.reload();
-          }
-      });
+      // $.ajax({
+      //     url: app.rootURL +'posts/new',
+      //     type: 'POST',
+      //     dataType: "json",
+      //     data: postInstance,
+      //     success: function() {
+      //       document.location.reload();
+      //     }
+      // });
     }
 
   });

@@ -6835,7 +6835,7 @@ nav form {
 .instructions {
   font-size: 16px;
   color: #148DB8;
-  text-align: left; }
+  text-align: center; }
 
 .post {
   list-style-type: none;
@@ -6852,6 +6852,9 @@ nav form {
 
 .sortby {
   display: inline-block; }
+
+.sorting input {
+  margin-left: 5px; }
 
 .signupForm {
   text-align: center;
@@ -6885,7 +6888,7 @@ input[type="password"] {
   text-align: center; }
   .scored h2 {
     display: inline-block;
-    margin-left: 126px;
+    margin-left: 110px;
     margin-top: 50px;
     font-size: 44px; }
   .scored form {

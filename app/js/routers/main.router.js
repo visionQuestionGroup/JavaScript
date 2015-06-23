@@ -10,17 +10,13 @@
 
       this.usersCollection = args.usersCollection;
       this.postsplayableCollection = args.postsplayableCollection;
-      this.postsunplayableCollection = args.postsunplayableCollection;
-      this.mypostsallCollection = args.mypostsallCollection;
-      this.mypostssolvedCollection = args.mypostssolvedCollection;
-      this.mypostsnotsolvedCollection = args.mypostsnotsolvedCollection;
       this.guessesCollection = args.guessesCollection;
-      this.scoreboardCollection = args.scoreboardCollection;
 
     },
 
     routes: {
-      '': 'homePage', //playable posts
+      '': 'homePage',
+      'playable': 'playable',
       'unplayable': 'unplayable',
       'allmyposts': 'mypostsall',
       'mypostssolved': 'mypostssolved',
@@ -32,38 +28,34 @@
     },
 
     homePage: function() {
-      new app.Views.Main({
-        postsplayableCollection: this.postsplayableCollection,
-        usersCollection: this.usersCollection
+      new app.Views.Main({});
+      new app.Views.NavView({});
+    },
+
+    playable: function() {
+      new app.Views.PostsPlayable ({
+        postsplayableCollection: this.postsplayableCollection
       });
       new app.Views.NavView({});
     },
 
     unplayable: function() {
-      new app.Views.PostsUnplayable({
-        postsunplayableCollection: this.postsunplayableCollection,
-      });
+      new app.Views.PostsUnplayable({});
       new app.Views.NavView({});
     },
 
     mypostsall: function() {
-      new app.Views.MyPostsAll({
-        mypostsallCollection: this.mypostsallCollection,
-      });
+      new app.Views.MyPostsAll({});
       new app.Views.NavView({});
     },
 
     mypostssolved: function() {
-      new app.Views.MyPostsSolved({
-        mypostssolvedCollection: this.mypostssolvedCollection,
-      });
+      new app.Views.MyPostsSolved({});
       new app.Views.NavView({});
     },
 
     mypostsnotsolved: function() {
-      new app.Views.MyPostsNotSolved({
-        mypostsnotsolvedCollection: this.mypostsnotsolvedCollection,
-      });
+      new app.Views.MyPostsNotSolved({});
       new app.Views.NavView({});
     },
 
@@ -81,9 +73,7 @@
     },
 
     scoreboard: function(username) {
-      new app.Views.Scoreboard({
-        scoreboardCollection: this.scoreboardCollection
-      });
+      new app.Views.Scoreboard({});
       new app.Views.NavView({});
     },
 

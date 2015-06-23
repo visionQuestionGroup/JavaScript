@@ -4,7 +4,8 @@
 
   var myPostsSolved = new app.Collections.MyPostsSolved();
 
-  myPostsSolved.fetch();
+  // myPostsSolved.fetch();
+
 
   app.Views.MyPostsSolved = Backbone.View.extend({
 
@@ -18,7 +19,7 @@
 
     initialize: function() {
 
-      this.collection = MyPostsSolved;
+      this.collection = myPostsSolved;
 
       this.render();
       $('.container').html(this.el);
@@ -43,15 +44,15 @@
       }
 
       // Add instance to collection and save to database
-      $.ajax({
-          url: app.rootURL +'posts/new',
-          type: 'POST',
-          dataType: "json",
-          data: postInstance,
-          success: function() {
-            document.location.reload();
-          }
-      });
+      // $.ajax({
+      //     url: app.rootURL +'posts/new',
+      //     type: 'POST',
+      //     dataType: "json",
+      //     data: postInstance,
+      //     success: function() {
+      //       document.location.reload();
+      //     }
+      // });
     }
 
   });

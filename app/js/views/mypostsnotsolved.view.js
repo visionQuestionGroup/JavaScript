@@ -4,7 +4,7 @@
 
   var myPostsNotSolved = new app.Collections.MyPostsNotSolved();
 
-  myPostsNotSolved.fetch();
+  // myPostsNotSolved.fetch();
 
   app.Views.MyPostsNotSolved = Backbone.View.extend({
 
@@ -43,15 +43,15 @@
       }
 
       // Add instance to collection and save to database
-      $.ajax({
-          url: app.rootURL +'posts/new',
-          type: 'POST',
-          dataType: "json",
-          data: postInstance,
-          success: function() {
-            document.location.reload();
-          }
-      });
+      // $.ajax({
+      //     url: app.rootURL +'posts/new',
+      //     type: 'POST',
+      //     dataType: "json",
+      //     data: postInstance,
+      //     success: function() {
+      //       document.location.reload();
+      //     }
+      // });
     }
 
   });
