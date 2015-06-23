@@ -28,7 +28,7 @@
         render: function() {
 
           var renderedTemplate = this.template({
-            // greeting: userGreet(),
+            greeting: this.greetUser(),
             isLoggedIn: isLoggedIn
           });
           this.$el.html(renderedTemplate);
@@ -48,8 +48,8 @@
                 password = $('#pw').val();
 
             var signInfo = {
-                "user_name": guessinfo.userName,
-                "password": guessinfo.password
+                "user_name": userName,
+                "password": password
             }
 
             console.log(signInfo);
@@ -81,13 +81,13 @@
         },
 
         greetUser: function() {
-          if (isLoggedIn == true){
+          if (isLoggedIn !== undefined){
             $.ajax({
-              url: app.rootURL + 'posts/user',
+              url: app.rootURL + 'user',
               type: 'GET',
               dataType: "json",
               success: function(data) {
-                var name = data[0].creator.first_name;
+                var name = data.user_name;
                 $('#greetName').html(name);
                 }
               });
@@ -96,7 +96,7 @@
         },
 
         displayScore: function() {
-          if (isLoggedIn == true){
+          if (isLoggedIn !== undefined){
             $.ajax({
               url: app.rootURL + 'user/score',
               type: 'GET',
