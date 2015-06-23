@@ -21,24 +21,7 @@
 
             $('#nav').html(this.el);
 
-            $.ajax({
-              url: app.rootURL + 'posts/user',
-              type: 'GET',
-              dataType: "json",
-              success: function(data) {
-                var name = data[0].creator.first_name;
-                $('#greetName').html(name);
-                }
-              });
-
-            $.ajax({
-              url: app.rootURL + 'user/score',
-              type: 'GET',
-              dataType: "json",
-              success: function(data) {
-                $('#score').html(data.score);
-                }
-              });
+            this.greetUser();
         },
 
 
@@ -96,6 +79,36 @@
 
             document.location.reload();
         },
+
+        greetUser: function() {
+          if (isLoggedIn == true){
+            $.ajax({
+              url: app.rootURL + 'posts/user',
+              type: 'GET',
+              dataType: "json",
+              success: function(data) {
+                var name = data[0].creator.first_name;
+                $('#greetName').html(name);
+                }
+              });
+          }
+
+        },
+
+        displayScore: function() {
+          if (isLoggedIn == true){
+            $.ajax({
+              url: app.rootURL + 'user/score',
+              type: 'GET',
+              dataType: "json",
+              success: function(data) {
+                $('#score').html(data.score);
+                }
+              });
+          }
+
+        }
+
 
 
 
