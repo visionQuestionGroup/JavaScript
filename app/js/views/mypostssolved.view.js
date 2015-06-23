@@ -4,7 +4,7 @@
 
   var myPostsSolved = new app.Collections.MyPostsSolved();
 
-  MyPostsSolved.fetch();
+  myPostsSolved.fetch();
 
   app.Views.MyPostsSolved = Backbone.View.extend({
 
