@@ -22,6 +22,8 @@
             $('#nav').html(this.el);
 
             this.greetUser();
+
+            this.displayScore();
         },
 
 
@@ -87,7 +89,7 @@
               type: 'GET',
               dataType: "json",
               success: function(data) {
-                var name = data.user_name;
+                var name = data.first_name;
                 $('#greetName').html(name);
                 }
               });
@@ -102,15 +104,12 @@
               type: 'GET',
               dataType: "json",
               success: function(data) {
-                $('#score').html(data.score);
-                }
-              });
+                var score = data.score;
+                $('#score').html(score);
+              }
+            });
           }
 
         }
-
-
-
-
     });
 }());
