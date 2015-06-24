@@ -41,14 +41,12 @@
 
 <div class="columns">
 
-  <ul class="small-block-grid-3 posts">
+  <ul class="small-block-grid-3">
     {{#each post}}
 
     <li class="post" data-id="{{id}}">
-      <div class="postview">
-        <a class="th" href="#visionQuestion/{{id}}"><img src="{{post_info.image_url}}"></a>
+        <a style="background-image: url( {{ post_info.image_url }} );"class="th thumb" href="#visionQuestion/{{id}}"></a>
         <p>Taken by: {{creator.user_name}}</p>
-      </div>
     </li>
 
     {{/each}}

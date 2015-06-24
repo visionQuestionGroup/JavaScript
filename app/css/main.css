@@ -6837,6 +6837,14 @@ nav form {
 .post {
   list-style-type: none; }
 
+.post a {
+  height: 300px;
+  width: 100%;
+  display: inline-block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 .sortby {
   display: inline-block; }
 
