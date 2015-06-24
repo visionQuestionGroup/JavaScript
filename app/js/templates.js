@@ -4,7 +4,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "\n    <li class=\"post\" data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n      <div class=\"postview\">\n        <a href=\"#visionQuestion/"
+    + "\">\n      <div class=\"postview\">\n        <a class=\"th\" href=\"#visionQuestion/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(alias4(((stack1 = (depth0 != null ? depth0.post_info : depth0)) != null ? stack1.image_url : stack1), depth0))

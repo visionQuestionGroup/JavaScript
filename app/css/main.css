@@ -6824,9 +6824,6 @@ nav form {
   margin: 18px 10px;
   padding: 10px; }
 
-.container img {
-  margin: 5px; }
-
 #howToPlay {
   font-size: 40px;
   color: #148DB8;
@@ -6838,17 +6835,7 @@ nav form {
   text-align: center; }
 
 .post {
-  list-style-type: none;
-  max-width: 32%;
-  padding: 3px; }
-
-.post:hover {
-  border: 1px black solid; }
-
-.posts {
-  width: 80%;
-  text-align: center;
-  margin: 0 auto; }
+  list-style-type: none; }
 
 .sortby {
   display: inline-block; }

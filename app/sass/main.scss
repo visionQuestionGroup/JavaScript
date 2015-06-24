@@ -153,12 +153,6 @@ nav form {
 
 // Main View
 
-.container {
-  img {
-    margin: 5px;
-  }
-}
-
 #howToPlay {
   font-size: 40px;
   color: #148DB8;
@@ -173,23 +167,12 @@ nav form {
 
 .post {
   list-style-type: none;
-  max-width: 32%;
-  padding: 3px;
-}
-
-.post:hover {
-  border: 1px black solid;
-}
-
-.posts {
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
 }
 
 .sortby {
   display: inline-block;
 }
+
 .sorting{
   input{
     margin-left: 5px;
